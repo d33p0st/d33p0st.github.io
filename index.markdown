@@ -24,5 +24,5 @@ Well, I like to code to solve problems and I am highly dedicated towards achievi
 
 ### Interests
 
-[projects]: d33p0st.in/projects
+[projects]: d33p0st.in/projects/
 <!-- [pypi]: https://pypi.org/project/optioner/ -->
