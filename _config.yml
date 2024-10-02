@@ -56,8 +56,8 @@ remote_theme: "just-the-docs/just-the-docs"
 
 callouts_level: quiet # or loud
 callouts:
-  force:
-    color: red
+  forceg:
+    color: green
   highlight:
     color: yellow
   important:
