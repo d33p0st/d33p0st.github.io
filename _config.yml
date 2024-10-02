@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Soumyo Deep Gupta
+title: ./d33p0st.in/
 email: deep.main.ac@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Lightweight, easy to use, complex features - all in one argument parser.
@@ -87,6 +87,8 @@ aux_links:
     - "https://linkedin.com/in/soumyodeepgupta"
   "GitHub":
     - "https://github.com/d33p0st"
+  "Instagram":
+    - "https://instagram.com/p00p3r_"
 
 # External navigation links
 nav_external_links:

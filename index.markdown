@@ -9,20 +9,18 @@ permalink: /
 # Soumyo Deep Gupta
 {: .fs-9 }
 
-A coder by heart, a problem solver and a M.Tech Student by day and Heavy experimental coder by night.
+- A M.Tech Student
+- A Problem Solver
 {: .fs-6 .fw-300 }
 
-[Medium][medium]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2}
-[pypi][pypi]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Browse Projects][projects]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2}
+<!-- [pypi][pypi]{: .btn .fs-5 .mb-4 .mb-md-0 } -->
 
 ---
 
-## Overview
-
-This website is a front and a journal to everything I did, do and will ever do. I'm glad that you found it do give it a look.
-
-## Interests
+{: .new}
+This is the 
 
 
-[medium]: https://medium.com/@d33p0st
+[projects]: d33p0st.in/projects
 [pypi]: https://pypi.org/project/optioner/

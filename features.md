@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Features
-nav_order: 2
+nav_order: 10
 permalink: /features/
 ---
 
