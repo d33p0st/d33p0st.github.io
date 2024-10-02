@@ -13,7 +13,7 @@ Student by day Experimental Coder by night.
 {: .fs-6 .fw-300 }
 
 [Browse Projects][projects]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2}
-<!-- [pypi][pypi]{: .btn .fs-5 .mb-4 .mb-md-0 } -->
+
 
 ---
 
@@ -25,5 +25,11 @@ Well, I like to code to solve problems and I am highly dedicated towards achievi
 
 ### Interests
 
+My interests towards technology is specific and I want to design and develop solutions that truly matter. As for my other interests, I like `Gaming`, playing `Guitar` and `Piano`. As a matter of fact I am a co-founder of an `Alt/Rock` boy band named `The Coffee Smirk`.
+
+[Youtube][youtube]{: .btn .fs-5 .mb-4 .mb-md-0 }
+
+
+
 [projects]: http://d33p0st.in/projects/
-<!-- [pypi]: https://pypi.org/project/optioner/ -->
+[youtube]: https://www.youtube.com/channel/UC7CMTMp5-uHrSdH_7pBIEXg
