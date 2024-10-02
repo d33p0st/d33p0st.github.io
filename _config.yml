@@ -83,13 +83,13 @@ enable_copy_code_button: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "GitHub @d33pster":
-    - "https://github.com/d33pster"
+  "Linkedin":
+    - "https://linkedin.com/in/soumyodeepgupta"
 
 # External navigation links
 nav_external_links:
-  - title: Linkedin
-    url: https://linkedin.com/in/soumyodeepgupta
+  - title: Github
+    url: https://github.com/d33p0st
 
 # Back to top link
 back_to_top: true
