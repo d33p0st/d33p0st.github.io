@@ -22,5 +22,7 @@ Since you're here can I assume you're interested? hmm..
 
 Well, I like to code to solve problems and I am highly dedicated towards achieving whatever goal I set. I believe in learning through applying and my long list of projects back that fact up. I am highly interested in creating `Applications` or `Softwares` that make life easy and truly contribute to evolving trend and changes.
 
+### Interests
+
 [projects]: d33p0st.in/projects
 <!-- [pypi]: https://pypi.org/project/optioner/ -->
