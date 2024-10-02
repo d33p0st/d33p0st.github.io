@@ -56,6 +56,8 @@ remote_theme: "just-the-docs/just-the-docs"
 
 callouts_level: quiet # or loud
 callouts:
+  force:
+    color: red
   highlight:
     color: yellow
   important:
@@ -73,8 +75,6 @@ callouts:
   example:
     title: Example
     color: green
-  force:
-    color: red
 
 kramdown:
   syntax_highlighter_opts:
