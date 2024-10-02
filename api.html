@@ -1,0 +1,56 @@
+---
+permalink: /api
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload/Download Interface</title>
+</head>
+<body>
+    <h2>File Upload/Download Interface</h2>
+
+    <h3>Upload File</h3>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput"><br><br>
+        <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+
+    <h3>Download Files</h3>
+    <ul id="fileList"></ul>
+
+    <script>
+        const apiUrl = 'https://19c6-106-222-197-192.ngrok-free.app'; // Replace with ngrok URL when deployed
+
+        // Function to upload file
+        function uploadFile() {
+            const formData = new FormData();
+            const file = document.getElementById('fileInput').files[0];
+            formData.append('file', file);
+
+            fetch(`${apiUrl}/upload`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Function to list files
+        function listFiles() {
+            fetch(`${apiUrl}/files`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('fileList').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        listFiles();
+    </script>
+</body>
+</html>

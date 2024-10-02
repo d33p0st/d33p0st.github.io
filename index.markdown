@@ -31,5 +31,5 @@ My interests towards technology is specific and I want to design and develop sol
 
 
 
-[projects]: http://d33p0st.in/projects/
+[projects]: https://d33p0st.in/projects/
 [youtube]: https://www.youtube.com/channel/UC7CMTMp5-uHrSdH_7pBIEXg
