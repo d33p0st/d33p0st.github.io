@@ -85,11 +85,13 @@ enable_copy_code_button: true
 aux_links:
   "Linkedin":
     - "https://linkedin.com/in/soumyodeepgupta"
+  "GitHub":
+    - "https://github.com/d33p0st"
 
 # External navigation links
 nav_external_links:
-  - title: Github
-    url: https://github.com/d33p0st
+  - title: Resume
+    url: https://drive.google.com/uc?export=download&id=1tAnupCWi4y9lL_yMgqTUHVoA6AzmYA4w
 
 # Back to top link
 back_to_top: true
