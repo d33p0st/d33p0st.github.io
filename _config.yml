@@ -53,8 +53,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# remote_theme: pages-themes/merlot@v0.2.0 # "just-the-docs/just-the-docs"
-theme: merlot
+remote_theme: pages-themes/merlot@v0.2.0 # "just-the-docs/just-the-docs"
+# theme: merlot
 
 # callouts_level: quiet # or loud
 # callouts:
