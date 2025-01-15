@@ -42,7 +42,7 @@ layout: default
                 <nav class="page-links">
                     <div class="page-item">
                         {% for page in site.pages %}
-                            {% if page.title and page.layout != 'homepage' %}
+                            {% if page.title and page.layout == 'page' %}
                                 <a href="{{ page.url }}" class="underline">{{ page.title }}</a>
                             {% endif %}
                         {% endfor %}
