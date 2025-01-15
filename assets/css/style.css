@@ -105,7 +105,7 @@ body, html {
 }
 
 header {
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 20px;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
@@ -153,19 +153,50 @@ header {
 .page-title {
   font-size: 2rem;       /* Larger title size */
   font-weight: bold;     /* Make title bold */
-  color: #333;           /* Dark color for text */
+  /* color: #3b85ff;           Dark color for text */
+  color: #333;
   text-align: left;      /* Align the title to the left */
   margin-bottom: 20px;   /* Space below the title */
+  font-style: italic;
 }
 
 /* Content styling */
 .page-content {
-  font-size: 1rem;       /* Standard font size for content */
+  font-size:large;       /* Standard font size for content */
   color: #444;           /* Neutral color for readability */
   line-height: 1.8;      /* Add space between lines for better readability */
   text-align: justify;   /* Justify text for equivalence alignment */
   hyphens: auto;         /* Enable hyphenation for better justification */
   word-wrap: break-word; /* Prevent long words from overflowing */
+}
+.page-content h1, h2, h3, h4, h5, h6 {
+  color: #3b85ff;
+}
+.page-content a {
+  color: #3b85ff;
+  text-decoration:wavy;
+  font-weight: bold;
+}
+.page-content a:hover {
+  color: #FF5A3C;
+}
+.page-content img {
+  width: 794px;
+}
+
+pre {
+  background-color: #eceaea;
+  /* padding: 10px; */
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family:monospace;
+}
+code {
+  color: #3b85ff;
+  /* background-color: #e9e7e7; */
+  background-color: #eceaea;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* Footer */
@@ -181,17 +212,19 @@ footer {
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .page-header-container {
-      flex-direction: column;    /* Stack logo and navigation on small screens */
+      flex-direction: column;    
+      /* Stack logo and navigation on small screens */
       align-items: flex-start;
   }
 
   .page-nav-links {
-      flex-direction: column;
+      /* flex-direction: column; */
       padding-left: 0;
   }
 
   .page-nav-links a {
       margin: 10px 0;            /* Space between items when stacked */
+      font-size: 20px;
   }
 
   .page-name-logo img {

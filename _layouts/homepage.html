@@ -43,7 +43,11 @@ layout: default
                     <div class="page-item">
                         {% for page in site.pages %}
                             {% if page.title and page.layout == 'page' %}
-                                <a href="{{ page.url }}" class="underline">{{ page.title }}</a>
+                                {% if page.title == 'About Deep' %}
+                                    <a href="{{ page.url }}" class="underline">About</a>
+                                {% else %}
+                                    <a href="{{ page.url }}" class="underline">{{ page.title }}</a>
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                     </div>

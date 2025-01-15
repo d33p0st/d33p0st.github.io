@@ -10,6 +10,42 @@ layout: default
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+
+        <style>
+            /* Custom purple and orange theme for Highlight.js */
+            .hljs {
+                /* background: #dededf; Dark purple background */
+                color: #3b85ff; /* Orange text */
+                /* font-weight:unset; */
+                font-size: 90%;
+            }
+            .hljs-keyword,
+            .hljs-selector-tag,
+            .hljs-literal,
+            .hljs-symbol,
+            .hljs-bullet {
+                color: #8f61f2; /* Orange highlights */
+                /* font-style:italic; */
+                font-weight:530;
+                /* font-size:90%; */
+            }
+            .hljs-comment,
+            .hljs-quote {
+                color: #bebebe; /* Purple comment text */
+            }
+            .hljs-string {
+                color: #DA70D6; /* Light purple for strings */
+            }
+            .hljs-number {
+                color: #D2691E; /* Orange brown for numbers */
+            }
+            .hljs-title {
+                color:#f76a6a;
+            }
+        </style>
     </head>
     <body>
         <!-- assign variables -->
@@ -58,6 +94,7 @@ layout: default
          <main class="page-main-content">
             <article>
                 <h1 class="page-title">{{ page.title }}</h1>
+                <hr class="title-split">
                 <div class="page-content">
                     {{ content }}
                 </div>
@@ -67,5 +104,13 @@ layout: default
          <footer>
             <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
          </footer>
+         <script>
+            // Initialize Highlight.js on all code blocks
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+            });
+        </script>
     </body>
 </html>
