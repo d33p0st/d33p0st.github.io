@@ -138,22 +138,34 @@ header {
   color: #6024d8;                /* Change color on hover */
 }
 
+/* Centered container resembling A4 width */
 .page-main-content {
-  padding: 20px;
-  background-color: #fff;
-  margin-top: 20px;
+  width: 794px;          /* A4 page width in pixels (approximately 210mm) */
+  margin: 20px auto;     /* Center horizontally with vertical margin */
+  padding: 40px;         /* Add padding around the content */
+  background-color: #fff; /* White background for content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean card look */
+  border-radius: 5px;    /* Slight rounding for visual appeal */
+  overflow: hidden;      /* Prevents content overflow */
 }
 
-article h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+/* Title styling */
+.page-title {
+  font-size: 2rem;       /* Larger title size */
+  font-weight: bold;     /* Make title bold */
+  color: #333;           /* Dark color for text */
+  text-align: left;      /* Align the title to the left */
+  margin-bottom: 20px;   /* Space below the title */
 }
 
+/* Content styling */
 .page-content {
-  font-size: 1.2rem;
-  color: #444;
-  line-height: 1.6;
+  font-size: 1rem;       /* Standard font size for content */
+  color: #444;           /* Neutral color for readability */
+  line-height: 1.8;      /* Add space between lines for better readability */
+  text-align: justify;   /* Justify text for equivalence alignment */
+  hyphens: auto;         /* Enable hyphenation for better justification */
+  word-wrap: break-word; /* Prevent long words from overflowing */
 }
 
 /* Footer */
