@@ -3,7 +3,7 @@ layout: page
 title: About Deep
 ---
 
-![ME](./assets/images/favicon.jpg)
+![ME](/assets/images/favicon.jpg)
 
 Hi, I'm Soumyo Deep Gupta, an M.Tech student at [VIT Chennai](https://chennai.vit.ac.in), majoring in Computer Science and Engineering. While most people settle for the basics, I push boundaries. I have a knack for problem-solving and coding, and I enjoy creating groundbreaking solutions from the ground up. I'm not just about learning - I aim to master new technologies and innovate where others stop.
 

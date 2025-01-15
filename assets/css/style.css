@@ -5,6 +5,66 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cartoon-pop {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+img {
+  transition: all 0.3s ease;
+  will-change: transform, opacity;
+}
+
+img:hover {
+  animation: disappear 0.8s ease-in-out;
+}
+
+@keyframes bounce-link {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .layout {
   display: flex;
   height: 100vh; /* Full height viewport */
@@ -39,10 +99,12 @@ body, html {
   font-size: 24px;
   color: #000; /* Or any color you prefer */
   text-decoration: none;
+  display: inline-block;
 }
 
 .socials a:hover {
   color: #702ec6; /* Example hover color */
+  animation: bounce-link 1s ease;
 }
 
 .socials {
@@ -103,6 +165,9 @@ body, html {
   width: 200px;
   height: 100px;
 }
+.page-name-logo img:hover {
+  animation: bounce 1s ease;
+}
 
 header {
   /* background-color: #fff; */
@@ -132,10 +197,20 @@ header {
   color: #333;
   font-size: 30px;
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .page-nav-links a:hover {
   color: #6024d8;                /* Change color on hover */
+  animation: bounce-link 1s ease;
+}
+
+.bouncel {
+  display: inline-block;
+}
+
+.bouncel:hover {
+  animation: bounce-link 1s ease;
 }
 
 /* Centered container resembling A4 width */
@@ -176,9 +251,11 @@ header {
   color: #3b85ff;
   text-decoration:wavy;
   font-weight: bold;
+  display: inline-block;
 }
 .page-content a:hover {
   color: #FF5A3C;
+  animation: bounce-link 1s ease;
 }
 .page-content img {
   width: 794px;

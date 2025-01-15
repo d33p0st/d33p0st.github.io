@@ -59,7 +59,7 @@ layout: default
                 <!-- Left Logo -->
                 <div class="page-name-logo">
                     <a href="{{ github.url }}">
-                        <img src="{{ 'assets/images/sign.png' }}" alt="signature">
+                        <img src="{{ '/assets/images/sign.gif' }}" alt="signature">
                     </a>
                 </div>
                 <!-- Right Navigation -->
@@ -102,7 +102,7 @@ layout: default
          </main>
 
          <footer>
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+            <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="bouncel">{{ site.username }}</a>. All rights reserved.</p>
          </footer>
          <script>
             // Initialize Highlight.js on all code blocks
