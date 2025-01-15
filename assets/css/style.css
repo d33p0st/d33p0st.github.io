@@ -1,0 +1,188 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.layout {
+  display: flex;
+  height: 100vh; /* Full height viewport */
+}
+.left {
+  width: 100px; /* Fixed width for the sidebar */
+  /* background-color: #f4f4f4; */
+  padding: 20px;
+  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+  overflow-y: auto; /* Scrollable if content overflows */
+}
+.container {
+  flex-grow: 1; /* Take up remaining space */
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto; /* Scrollable if content overflows */
+}
+.logo img {
+  width: 85px;
+  height: 85px;
+  border-radius: 15px;
+  margin-bottom: 7px;
+}
+.name img {
+  width: 85px;
+  height: 45px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  font-size: 24px;
+  color: #000; /* Or any color you prefer */
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #702ec6; /* Example hover color */
+}
+
+.socials {
+  margin-bottom: 15;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  font-size: 90%;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #000000; /* Color of the underline */
+  transition: width 345ms ease-out; /* Adjust duration and timing */
+}
+
+.underline:hover::after {
+  width: 100%; /* Full width when hovered */
+}
+
+.page-links {
+  margin-top: 10px;
+}
+
+.page-item a {
+  margin-left: 0px;
+  text-decoration: none;
+  color: #000;
+}
+.page-item a:hover {
+  font-weight: bold;
+}
+
+.homepage-title {
+  color: #4720c9;
+}
+
+.homepage-title-split {
+  width: 50%;
+  margin-left: 0px;
+}
+
+.title-split {
+  border: none;
+  height: 5px; /* Thickness of the line */
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 165, 0, 0.7), rgba(255, 105, 180, 0.5));
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.page-name-logo img {
+  width: 200px;
+  height: 100px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* Flexbox layout for header */
+.page-header-container {
+  display: flex;
+  justify-content: space-between;  /* Space between logo and navigation */
+  align-items: center;            /* Vertically center the items */
+}
+
+.page-nav-bar {
+  display: flex;                  /* Use flexbox for the navigation */
+  justify-content: flex-end;      /* Align the navigation to the right */
+}
+
+.page-nav-links {
+  display: flex;                  /* Align navigation links in a row */
+  gap: 30px;                      /* Space between the links */
+}
+
+.page-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.page-nav-links a:hover {
+  color: #6024d8;                /* Change color on hover */
+}
+
+.page-main-content {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+article h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.page-content {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  /* background-color: #333; */
+  /* color: #fff; */
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .page-header-container {
+      flex-direction: column;    /* Stack logo and navigation on small screens */
+      align-items: flex-start;
+  }
+
+  .page-nav-links {
+      flex-direction: column;
+      padding-left: 0;
+  }
+
+  .page-nav-links a {
+      margin: 10px 0;            /* Space between items when stacked */
+  }
+
+  .page-name-logo img {
+      height: 40px;              /* Smaller logo size on mobile */
+  }
+}

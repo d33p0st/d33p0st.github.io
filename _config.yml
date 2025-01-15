@@ -1,0 +1,10 @@
+title: "tshoqrr"
+description: "Welcome to my HomePage"
+url: "https://d33p0st.in"
+
+baseurl: ""
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed

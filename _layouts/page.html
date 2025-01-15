@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <header>
+        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      </header>
+      <nav>
+        <ul>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+      <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+      </footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>{{ page.title }}</h1>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+</body>
+</html>

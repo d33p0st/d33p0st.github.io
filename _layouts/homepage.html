@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ site.title }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    </head>
+    <body>
+        <!-- Assign github_url from data.social -->
+        {% assign github_url = site.data.social | where: "platform", "github" | first %}
+       <!-- Whole Screen -->
+        <div class="layout">
+            <!-- left split -->
+            <div class="left">
+                <!-- profile picture -->
+                <div class="logo">
+                    <a href="{{ github_url.url }}" target="_blank">
+                        <img src="{{ 'assets/images/logo.png' }}" alt="logo">
+                    </a>
+                </div>
+                <!-- Signature -->
+                <div class="name">
+                    <a href="{{ github_url.url }}" target="_blank">
+                        <img src="{{ 'assets/images/l_name_.png' }}" alt="name">
+                    </a>
+                </div>
+                <!-- socials -->
+                <div class="socials">
+                    {% for link in site.data.social %}
+                    <a href="{{ link.url }}" target="_blank">
+                        <i class="fab fa-{{ link.platform }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+                <!-- navigation links -->
+                <nav class="page-links">
+                    <div class="page-item">
+                        {% for page in site.pages %}
+                            {% if page.title and page.layout != 'homepage' %}
+                                <a href="{{ page.url }}" class="underline">{{ page.title }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Right split -->
+            <main class="container">
+                <!-- {% if site.title %}
+                    <div>
+                        <h1 class="header-underline">{{ site.title }}</h1>
+                        <hr class="title-split">
+                    </div>
+                {% endif %} -->
+                
+                {{ content }}
+
+            </main>
+        </div>
+    </body>
+</html>
