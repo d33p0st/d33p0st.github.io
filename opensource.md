@@ -95,3 +95,18 @@ Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [**Portlive**](https://github.com/d33p0st/portlive)
 {: .tooltip position="side" }
+{: content="Description:
+Portlive is a python library that enables users to install and import any other library simultaneously and dynamically. It also supports creating aliases for those imports such as 'pandas.DataFrame' can be imported and aliased under 'df'. If pandas is not installed it will be installed and made available to the current script
+environment. As python does not natively supports installing a library using a script and importing it to the same library, Portlive comes handy.
+
+Content includes:
+* Portlive class for all purposes.
+
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
