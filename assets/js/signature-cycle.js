@@ -2,7 +2,7 @@
 const images = [
     '/assets/images/sign.gif',
     '/assets/images/sign3.gif',
-    '/assets/images/sign4.gif'
+    // '/assets/images/sign4.gif'
 ];
 
 let currentImageIndex = 1;
