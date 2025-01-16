@@ -186,8 +186,16 @@ body, html {
   animation: bounce 1s ease;
 }
 
-header {
+.page-header {
+  /* position: fixed;
+  top: 0; */
   padding: 20px;
+  /* z-index: 1000;
+  left: 0;
+  background-color: white; /* Prevents transparency */
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  /* width: 100%;
+  height: 60px; */
 }
 
 /* Flexbox layout for header */
@@ -237,6 +245,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean card look */
   border-radius: 5px;    /* Slight rounding for visual appeal */
   overflow: hidden;      /* Prevents content overflow */
+  /* margin-top: 200px; */
 }
 
 /* Title styling */
@@ -264,8 +273,8 @@ header {
 }
 .page-content a {
   color: #3b85ff;
-  text-decoration:wavy;
-  font-weight: bold;
+  text-decoration: wavy;
+  font-weight: normal;
   display: inline-block;
 }
 .page-content a:hover {
@@ -304,6 +313,28 @@ footer {
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
+  .page-header-container {
+      /* flex-direction: column;     */
+      /* Stack logo and navigation on small screens */
+      align-items: flex-start;
+  }
+
+  .page-nav-links {
+      /* flex-direction: column; */
+      padding-left: 0;
+  }
+
+  .page-nav-links a {
+      margin: 10px 0;            /* Space between items when stacked */
+      font-size: 20px;
+  }
+
+  .page-name-logo img {
+      height: 40px;              /* Smaller logo size on mobile */
+  }
+}
+
+@media (max-width: 500px) {
   .page-header-container {
       flex-direction: column;    
       /* Stack logo and navigation on small screens */

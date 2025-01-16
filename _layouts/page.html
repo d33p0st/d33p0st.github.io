@@ -55,12 +55,12 @@ layout: default
         {% assign linkedin = site.data.social | where: "platform", "linkedin" | first %}
 
         <!-- Page Header Container -->
-         <header>
+         <header class="page-header">
             <div class="page-header-container">
                 <!-- Left Logo -->
                 <div class="page-name-logo">
                     <a href="/">
-                        <img src="{{ '/assets/images/sign2.gif' }}" alt="signature">
+                        <img id="cycle-image-sign" src="{{ '/assets/images/sign3.gif' }}" alt="signature">
                     </a>
                 </div>
                 <!-- Right Navigation -->
@@ -105,13 +105,7 @@ layout: default
          <footer>
             <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="bouncel">{{ site.username }}</a>. All rights reserved.</p>
          </footer>
-         <script>
-            // Initialize Highlight.js on all code blocks
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightElement(block);
-                });
-            });
-        </script>
+         <script src="{{ '/assets/js/syntax-highlighter.js' }}"></script>
+         <script src="{{ '/assets/js/signature-cycle.js' }}"></script>
     </body>
 </html>
