@@ -1,10 +1,4 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
+/* Animation for an image to bounce */
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -23,6 +17,7 @@ body, html {
   }
 }
 
+/* Animation for an image to do a cartoon pop */
 @keyframes cartoon-pop {
   0% {
     transform: scale(1) rotate(0deg);
@@ -38,15 +33,7 @@ body, html {
   }
 }
 
-img {
-  transition: all 0.3s ease;
-  will-change: transform, opacity;
-}
-
-img:hover {
-  animation: disappear 0.8s ease-in-out;
-}
-
+/* Animation for a link to bounce */
 @keyframes bounce-link {
   0% {
     transform: translateY(0);
@@ -65,58 +52,87 @@ img:hover {
   }
 }
 
+/* All Body and html unless given otherwise */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'League Spartan';
+}
+
+/* HomePage Type Page Full Size Container */
 .layout {
   display: flex;
   height: 100vh; /* Full height viewport */
 }
+/* Left Side of the container */
 .left {
   width: 100px; /* Fixed width for the sidebar */
-  /* background-color: #f4f4f4; */
   padding: 20px;
-  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
   overflow-y: auto; /* Scrollable if content overflows */
 }
+/* Right side of the container */
 .container {
   flex-grow: 1; /* Take up remaining space */
   background-color: #ffffff;
   padding: 20px;
   overflow-y: auto; /* Scrollable if content overflows */
 }
+/* Profile Picture in home page */
+.logo {
+  position: relative;
+}
 .logo img {
+  display: block;
   width: 85px;
   height: 85px;
   border-radius: 15px;
   margin-bottom: 7px;
 }
+.logo:hover img {
+  animation: bounce 1s ease;
+}
+/* Name in the home page */
 .name img {
   width: 85px;
-  height: 45px;
+  height: 85px;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-
+.name img:hover {
+  animation: bounce 1s ease;
+}
+/* Social Links in the home page */
+.socials {
+  margin-bottom: 15;
+}
 .socials a {
   font-size: 24px;
   color: #000; /* Or any color you prefer */
   text-decoration: none;
   display: inline-block;
 }
-
-.socials a:hover {
-  color: #702ec6; /* Example hover color */
+/* Social Icons in home page */
+.fab:hover {
   animation: bounce-link 1s ease;
 }
-
-.socials {
-  margin-bottom: 15;
+/* Individual Icon colors */
+.fa-github:hover {
+  color: #000;
+}
+.fa-instagram:hover {
+  color: #890aff;
+}
+.fa-linkedin:hover {
+  color: #3b85ff;
 }
 
+/* Underlining a text */
 .underline {
   display: inline-block;
   position: relative;
   font-size: 90%;
 }
-
 .underline::after {
   content: '';
   position: absolute;
@@ -127,31 +143,32 @@ img:hover {
   background-color: #000000; /* Color of the underline */
   transition: width 345ms ease-out; /* Adjust duration and timing */
 }
-
 .underline:hover::after {
   width: 100%; /* Full width when hovered */
 }
 
-.page-links {
-  margin-top: 10px;
-}
-
-.page-item a {
-  margin-left: 0px;
-  text-decoration: none;
-  color: #000;
-}
-.page-item a:hover {
-  font-weight: bold;
-}
-
-.homepage-title {
+/* .homepage-title {
   color: #4720c9;
 }
 
 .homepage-title-split {
   width: 50%;
   margin-left: 0px;
+} */
+
+.page-links {
+  margin-top: 10px;
+  width: 50px;
+}
+
+.page-item a {
+  margin-left: 0px;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: #000;
+}
+.page-item a:hover {
+  font-weight: bold;
 }
 
 .title-split {
@@ -170,9 +187,7 @@ img:hover {
 }
 
 header {
-  /* background-color: #fff; */
   padding: 20px;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 /* Flexbox layout for header */
@@ -284,6 +299,7 @@ footer {
   padding: 10px;
   font-size: 0.9rem;
   margin-top: 40px;
+  font-family: 'League Spartan';
 }
 
 /* Responsive Design for smaller screens */

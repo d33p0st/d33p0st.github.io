@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About Deep
+title: About
+heading: About Deep
 ---
 
 ![ME](/assets/images/favicon.jpg)
