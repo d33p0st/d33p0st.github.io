@@ -7,7 +7,7 @@ heading: Open Source Contributions
 Hover over an item to see description.
 
 [**Modstore**](https://github.com/d33p0st/modstore)
-{: .tooltip position="side" }
+{: .tooltip position="right-side" }
 {: content="Description:
 Modstore is an one stop point for all your data structure needs. Modstore features several new and upgraded data structures such as List(Upgraded), BlockChain (New and Rust Powered), Stack (New) or Queue (New) and much more.
 
@@ -37,7 +37,7 @@ License: MIT
 Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [**GoopyWoopy**](https://github.com/d33p0st/goopywoopy)
-{: .tooltip position="side" }
+{: .tooltip position="right-side" }
 {: content="Description:
 GoopyWoopy is a python library that contains tools and kits for easy and better programming. All classes and functions in this library follows a thorough Object Oriented Programming approach.
 
@@ -58,7 +58,7 @@ License: MIT
 Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [**TkOne**](https://github.com/d33p0st/TkOne)
-{: .tooltip position="side" }
+{: .tooltip position="right-side" }
 {: content="Description:
 TkOne is python tkinter and customtkinter library extender that helps create Scrollable GUI with theme selection.
 
@@ -77,7 +77,7 @@ License: MIT
 Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [**Argpi**](https://github.com/d33p0st/argpi)
-{: .tooltip position="side" }
+{: .tooltip position="right-side" }
 {: content="Description:
 Argpi is a registration based argument parser that performs the presence-check of the arguments on its own. Every case scenario to be handled must be registered and argpi will automatically carryout the tasks based on the arguments passed by the user. This is an extension of one of my older library: Optioner. Argpi runs on the same engine as Optioner but has an extra layer of code to wrap the bare metal specifications and improve code readability and reduce number of lines it takes to handle argument parsing.
 
@@ -94,7 +94,7 @@ License: MIT
 Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [**Portlive**](https://github.com/d33p0st/portlive)
-{: .tooltip position="side" }
+{: .tooltip position="right-side" }
 {: content="Description:
 Portlive is a python library that enables users to install and import any other library simultaneously and dynamically. It also supports creating aliases for those imports such as 'pandas.DataFrame' can be imported and aliased under 'df'. If pandas is not installed it will be installed and made available to the current script
 environment. As python does not natively supports installing a library using a script and importing it to the same library, Portlive comes handy.
@@ -110,3 +110,18 @@ License: MIT
 
 Note: Click the link for source code." }
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[**Wrapper-bar**](https://github.com/d33p0st/wrapper-bar)
+{: .tooltip position="left-side" }
+{: content="Description:
+Wrapper-Bar is the original module that inspired a full fledged progress bar present in the 'GoopyWoopy' library. Wrapper-Bar uses external progress bar libraries such as 'tqdm' and 'progressbar' and extends their functionality to help create a progress bar that actually runs commands in the background. It supports shell (bash) codes, python codes/scripts, storing output results and logging.
+
+Contents include:
+* Wrapper class to create a code wrapper bar.
+
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
