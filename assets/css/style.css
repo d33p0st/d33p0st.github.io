@@ -187,15 +187,7 @@ body, html {
 }
 
 .page-header {
-  /* position: fixed;
-  top: 0; */
   padding: 20px;
-  /* z-index: 1000;
-  left: 0;
-  background-color: white; /* Prevents transparency */
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-  /* width: 100%;
-  height: 60px; */
 }
 
 /* Flexbox layout for header */
@@ -246,6 +238,7 @@ body, html {
   overflow: hidden;      /* Prevents content overflow */
   margin-top: 0px;
   padding-top: 20px;
+  overflow: visible;
 }
 
 /* Title styling */
@@ -360,4 +353,48 @@ footer {
   .page-name-logo img {
       height: 40px;              /* Smaller logo size on mobile */
   }
+}
+
+/* Tooltip for link popups */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: attr(content);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  text-align: left;
+  width: max-content;
+  max-width: 500px;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.tooltip[position="above"]::after {
+  bottom: 125%;
+  left: 70%;
+  transform: translateX(-50%);
+}
+.tooltip[position="side"]::after {
+  top: 50%;
+  left: 125%;
+  transform: translateY(-50%);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
