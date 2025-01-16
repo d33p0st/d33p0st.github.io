@@ -218,14 +218,13 @@ body, html {
 .page-nav-links a {
   text-decoration: none;
   color: #333;
-  font-size: 30px;
-  transition: color 0.3s ease;
+  font-size: 25px;
   display: inline-block;
 }
 
 .page-nav-links a:hover {
-  color: #6024d8;                /* Change color on hover */
-  animation: bounce-link 1s ease;
+  color: #f6185e;                /* Change color on hover */
+  animation: bounce-link 1s ease-in-out infinite;
 }
 
 .bouncel {
@@ -242,10 +241,11 @@ body, html {
   margin: 20px auto;     /* Center horizontally with vertical margin */
   padding: 40px;         /* Add padding around the content */
   background-color: #fff; /* White background for content */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean card look */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Optional shadow for a clean card look */
   border-radius: 5px;    /* Slight rounding for visual appeal */
   overflow: hidden;      /* Prevents content overflow */
-  /* margin-top: 200px; */
+  margin-top: 0px;
+  padding-top: 20px;
 }
 
 /* Title styling */
@@ -271,18 +271,24 @@ body, html {
 .page-content h1, h2, h3, h4, h5, h6 {
   color: #3b85ff;
 }
+.page-footer a,
 .page-content a {
   color: #3b85ff;
-  text-decoration: wavy;
+  text-decoration: underline;
   font-weight: normal;
+  text-underline-offset: 6px;
   display: inline-block;
 }
+.page-footer a:hover,
 .page-content a:hover {
   color: #FF5A3C;
-  animation: bounce-link 1s ease;
+  animation: bounce-link 1s ease-in-out infinite;
 }
 .page-content img {
   width: 794px;
+}
+.page-content li strong {
+  text-decoration: none;
 }
 
 pre {

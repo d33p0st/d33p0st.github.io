@@ -73,12 +73,12 @@ layout: default
                             <!-- {{ nav_data }} -->
                             {% for page_name in nav_data.links %}
                                 {% assign link = site.pages | where: "title", page_name | first %}
-                                <a href="{{ link.url }}" class="underline">{{ page_name }}</a>
+                                <a href="{{ link.url }}">{{ page_name }}</a>
                             {% endfor %}
 
                             {% for page_name in nav_data.external %}
                                 {% assign link = site.pages | where: "title" , page_name | first %}
-                                <a href="{{ link.url }}" class="underline" target="_blank">{{ page_name }}</a>
+                                <a href="{{ link.url }}" target="_blank">{{ page_name }}</a>
                             {% endfor %}
                         {% else %}
                             {% for page in site.pages %}
@@ -102,7 +102,7 @@ layout: default
             </article>
          </main>
 
-         <footer>
+         <footer class="page-footer">
             <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="bouncel">{{ site.username }}</a>. All rights reserved.</p>
          </footer>
          <script src="{{ '/assets/js/syntax-highlighter.js' }}"></script>
