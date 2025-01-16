@@ -125,3 +125,42 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[**Mr-menu**](https://github.com/d33p0st/mr-menu)
+{: .tooltip position="left-side" }
+{: content="Description:
+Mr-menu is a python library to create menus and sub-menus. It can handle creation of a huge tree of menus and easily go back and forth while carrying out tasks related to the menu selected in-between.
+
+Content includes:
+* Menu class for creating simple menus.
+* MenuBuilder class for creating elaborate and complex menus.
+
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+<!-- 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Line Breaks here for the page. Will adjust later based on the total number of entries
+
+ -->
+[**Looger**](https://github.com/d33p0st/looger)
+{: .tooltip position="right-side" }
+{: content="Description:
+Looger is a rust powered python library for logging. It supports colors and utilizes the speed that rust provides for a seamless user experience.
+
+Content includes:
+* Logger class for all intents and purposes.
+
+Details:
+Language: Python-Rust-Mix,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click on the link for source code." }
