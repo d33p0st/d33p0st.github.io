@@ -4,8 +4,6 @@ title: Open Source
 heading: Open Source Contributions
 ---
 
-Hover over an item to see description.
-
 [**Modstore**](https://github.com/d33p0st/modstore)
 {: .tooltip position="right-side" }
 {: content="Description:
@@ -35,7 +33,7 @@ OS: macOS, Windows, Linux
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**GoopyWoopy**](https://github.com/d33p0st/goopywoopy)
 {: .tooltip position="right-side" }
 {: content="Description:
@@ -56,7 +54,7 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**TkOne**](https://github.com/d33p0st/TkOne)
 {: .tooltip position="right-side" }
 {: content="Description:
@@ -75,7 +73,7 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Argpi**](https://github.com/d33p0st/argpi)
 {: .tooltip position="right-side" }
 {: content="Description:
@@ -92,7 +90,7 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Portlive**](https://github.com/d33p0st/portlive)
 {: .tooltip position="right-side" }
 {: content="Description:
@@ -109,7 +107,7 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Wrapper-bar**](https://github.com/d33p0st/wrapper-bar)
 {: .tooltip position="left-side" }
 {: content="Description:
@@ -125,7 +123,7 @@ OS: Independent
 License: MIT
 
 Note: Click the link for source code." }
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Mr-menu**](https://github.com/d33p0st/mr-menu)
 {: .tooltip position="left-side" }
 {: content="Description:
@@ -164,3 +162,100 @@ OS: Independent
 License: MIT
 
 Note: Click on the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**rustypath**](https://github.com/d33p0st/rustypath)
+{: .tooltip position="right-side" }
+{: content="Description:
+Rustypath is a rust crate for managing paths. Instead of dealing with multiple types such as Path and PathBuf, rustypath::RPath combines them all. With easy built-in functions to make your life better.
+
+Content includes:
+* RPath struct for all intents and purposes. Supports py03 crate for creating python bindings and RPath to pyString conversion.
+
+Details:
+Language: Rust,
+Available-using: cargo (rust)
+OS: Independent
+License: MIT
+
+Note: Click on the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**Deny-Me**](https://github.com/d33p0st/deny-me)
+{: .tooltip position="right-side" }
+{: content="Description:
+Deny-me is a python library that boasts decorators to help restrict methods inside a class based on several factors.
+
+Content includes:
+* @once and @twice decorators along with a few others.
+
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**Furypie**](https://github.com/d33p0st/furypie)
+{: .tooltip position="right-side" }
+{: content="Description:
+Furypie is just like pip but act as a bridge between your public packages on pypi and private ones on gemfury. You can even have a requirements.txt file with mixed public and private packages and furypie will install the modules for you. Automatically resolves if the package is public or private.
+
+Content include:
+* Callable command -> 'furypie'
+
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**Argrust**](https://github.com/d33p0st/argrust)
+{: .tooltip position="right-side" }
+{: content="Description:
+argrust is the Rust counterpart for Optioner python library and works exactly the same.
+
+Details:
+Language: Rust,
+Available-using: cargo (rust)
+OS: Independent
+License: MIT
+
+Note: Click on the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**xmenu**](https://github.com/d33p0st/xmenu)
+{: .tooltip position="left-side" }
+{: content="Description:
+xmenu is a rust crate to create dynamic menus in the terminal with navigation support and highlight.
+
+Details:
+Language: Rust,
+Available-using: cargo (rust)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**gcl**](https://github.com/d33p0st/gcl)
+{: .tooltip position="left-side" }
+{: content="Description:
+gcl is a callable command that replaces git clone. It is written in rust and supports easy argument formats. gcl is capable of cloning private repositories.
+
+Content includes:
+Callable command -> 'gcl'
+
+Details:
+Language: Rust,
+Available-using: cargo (rust)
+OS: Independent
+License: MIT
+
+Note: Click the link for source code." }
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+[**s3ssion**](https://github.com/d33p0st/s3ssion)
+{: .tooltip position="left-side" data-weight="10" }
+{: content="Description:
+
+
+Note: Click on the link for " }

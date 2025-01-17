@@ -278,7 +278,9 @@ body, html {
   animation: bounce-link 1s ease-in-out infinite;
 }
 .page-content img {
-  width: 794px;
+  /* width: 794px; */
+  width: 300px;
+  
 }
 .page-content li strong {
   text-decoration: none;
@@ -355,6 +357,38 @@ footer {
   }
 }
 
+/* Custom purple and orange theme for Highlight.js */
+.hljs {
+  /* background: #dededf; Dark purple background */
+  color: #3b85ff; /* Orange text */
+  /* font-weight:unset; */
+  font-size: 90%;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: #8f61f2; /* Orange highlights */
+  /* font-style:italic; */
+  font-weight:530;
+  /* font-size:90%; */
+}
+.hljs-comment,
+.hljs-quote {
+  color: #bebebe; /* Purple comment text */
+}
+.hljs-string {
+  color: #DA70D6; /* Light purple for strings */
+}
+.hljs-number {
+  color: #D2691E; /* Orange brown for numbers */
+}
+.hljs-title {
+  color:#f76a6a;
+}
+
+
 /* Tooltip for link popups */
 .tooltip {
   position: relative;
@@ -378,7 +412,7 @@ footer {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
-  z-index: 9999;
+  z-index: 100;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }
@@ -395,7 +429,7 @@ footer {
 }
 .tooltip[position="left-side"]::after {
   top: 50%;
-  right: 100%;
+  right: 90%;
   transform: translateY(-50%);
 }
 
@@ -403,3 +437,12 @@ footer {
   opacity: 1;
   visibility: visible;
 }
+
+.opensource {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 40px;
+  box-shadow: #333;
+}
+

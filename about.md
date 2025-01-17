@@ -4,12 +4,58 @@ title: About
 heading: About Deep
 ---
 
-![ME](/assets/images/favicon.jpg)
+<!--  ![ME](/assets/images/favicon.jpg)  . -->
 
-Hi, I'm Soumyo Deep Gupta, an M.Tech student at [VIT Chennai](https://chennai.vit.ac.in), majoring in Computer Science and Engineering. While most people settle for the basics, I push boundaries. I have a knack for problem-solving and coding, and I enjoy creating groundbreaking solutions from the ground up. I'm not just about learning - I aim to master new technologies and innovate where others stop.
+<div class="content-container">
+  <div class="text-and-image">
+    <div class="text-section">
+      <p>
+        Hi, I'm Soumyo Deep Gupta, an M.Tech student at <a href="https://chennai.vit.ac.in">VIT Chennai</a>, majoring in Computer Science and Engineering. While most people settle for the basics, I push boundaries. I have a knack for problem-solving and coding, and I enjoy creating groundbreaking solutions from the ground up. I'm not just about learning - I aim to master new technologies and innovate where others stop.
+      </p>
+    </div>
+    <div class="image-section">
+      <img src="/assets/images/favicon.jpg" alt="Descriptive Alt Text">
+    </div>
+  </div>
+</div>
 
-I've got two patents currently in process, and my research has been significant enough to earn me three published [papers](https://ieeexplore.ieee.org/author/37089843899). Check out my GitHub repositories spread across [d33pster](https://github.com/d33pster) and [d33p0st](https://github.com/d33p0st), where I share my latest projects.
+<div class="full-text">
+    <p>
+        I've got two patents currently in process, and my research has been significant enough to earn me three published <a href="https://ieeexplore.ieee.org/author/37089843899">papers</a>. Check out my GitHub repositories spread across <a href="https://github.com/d33pster">d33pster</a> and <a href="https://github.com/d33p0st">d33p0st</a>, where I share my latest projects.
+    </p>
+    <p>
+        Oh, and back in my B.Tech days, I co-founded an Alt/Rock boy band called The Coffee Smirk - because why not balance tech with a bit of creativity?
+    </p>
+    <p>
+        I’m always looking for the next big thing. If you want to collaborate on something or just see how I can disrupt the status quo, hit me up <a href="mailto:deep@d33p0st.in">here</a>.
+    </p>
+</div>
 
-Oh, and back in my B.Tech days, I co-founded an Alt/Rock boy band called The Coffee Smirk - because why not balance tech with a bit of creativity?
+<style>
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-I’m always looking for the next big thing. If you want to collaborate on something or just see how I can disrupt the status quo, hit me up [here](mailto:deep.main.ac@gmail.com).
+  .text-and-image {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between text and image */
+  }
+
+  .text-section {
+    flex: 1; /* Take up remaining space */
+  }
+
+  .image-section img {
+    width: 300px; /* Fix the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline element issues */
+    border-radius: 6px;
+  }
+
+  .full-text {
+    margin-top: 0px;
+  }
+</style>

@@ -17,39 +17,6 @@ layout: default
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
-
-        <style>
-            /* Custom purple and orange theme for Highlight.js */
-            .hljs {
-                /* background: #dededf; Dark purple background */
-                color: #3b85ff; /* Orange text */
-                /* font-weight:unset; */
-                font-size: 90%;
-            }
-            .hljs-keyword,
-            .hljs-selector-tag,
-            .hljs-literal,
-            .hljs-symbol,
-            .hljs-bullet {
-                color: #8f61f2; /* Orange highlights */
-                /* font-style:italic; */
-                font-weight:530;
-                /* font-size:90%; */
-            }
-            .hljs-comment,
-            .hljs-quote {
-                color: #bebebe; /* Purple comment text */
-            }
-            .hljs-string {
-                color: #DA70D6; /* Light purple for strings */
-            }
-            .hljs-number {
-                color: #D2691E; /* Orange brown for numbers */
-            }
-            .hljs-title {
-                color:#f76a6a;
-            }
-        </style>
     </head>
     <body>
         <!-- assign variables -->
@@ -100,7 +67,16 @@ layout: default
                 <h1 class="page-title">{{ page.heading }}</h1>
                 <hr class="title-split">
                 <div class="page-content">
-                    {{ content }}
+
+                    <!-- If the page is open source -->
+                    {% if page.title == "Open Source" %}
+                        <p>Hover over an item to see description.</p>
+                        <div class="opensource">
+                            {{content}}
+                        </div>
+                    {% else %}
+                        {{content}}
+                    {% endif %}
                 </div>
             </article>
          </main>
@@ -112,5 +88,6 @@ layout: default
          <script src="{{ '/assets/js/syntax-highlighter.js' }}"></script>
          <script src="{{ '/assets/js/signature-cycle.js' }}"></script>
          <!-- <script src="{{ '/assets/js/tooltip.js' }}"></script> -->
+         <!-- <script src="{{ '/assets/js/wc.js' }}"></script>  -->
     </body>
 </html>
