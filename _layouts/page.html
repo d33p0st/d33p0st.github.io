@@ -43,17 +43,28 @@ layout: default
                             <!-- {{ nav_data }} -->
                             {% for page_name in nav_data.links %}
                                 {% assign link = site.pages | where: "title", page_name | first %}
-                                <a href="{{ link.url }}">{{ page_name }}</a>
+                                {% assign name = link.name | remove: ".md" %}
+                                {% assign data = site_data[name] %}
+                                <a href="{{ link.url }}" class="tooltip" position="nav-link" content="{{ data.description }}">{{ page_name }}</a>
                             {% endfor %}
 
                             {% for page_name in nav_data.external %}
                                 {% assign link = site.pages | where: "title" , page_name | first %}
-                                <a href="{{ link.url }}" target="_blank">{{ page_name }}</a>
+                                <a href="{{ link.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ link.description }}">{{ page_name }}</a>
                             {% endfor %}
                         {% else %}
+                            <!-- if nav data for current page does not exist -->
                             {% for page in site.pages %}
                                 {% if page.title and page.layout != "homepage" %}
-                                    <a href="{{ page.url }}">{{ page.title }}</a>
+                                    {% if page.layout == "redirect" %}
+                                        <!-- if redirect -->
+                                        <a href="{{ page.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ page.description }}">{{ page.title }}</a>
+                                    {% else %}
+                                        <!-- if page -->
+                                        {% assign name = page.name | remove: ".md" %}
+                                        {% assign data = side_data[name] %}
+                                        <a href="{{ page.url }}" class="tooltip" position="nav-link" content="{{ data.description }}">{{ page.title }}</a>
+                                    {% endif %}
                                 {% endif %}
                             {% endfor %}
                         {% endif %}

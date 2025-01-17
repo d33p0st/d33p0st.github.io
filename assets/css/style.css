@@ -428,8 +428,19 @@ footer {
 }
 .tooltip[position="left-side"] .tooltip-content {
   top: 50%;
-  right: 90%;
+  right: 125%;
   transform: translateY(-50%);
+}
+.tooltip[position="bottom"] .tooltip-content {
+  top: 125%;
+  left: 70%;
+  transform: translateX(-50px);
+}
+.tooltip[position="nav-link"] .tooltip-content {
+  top: 200%;
+  left: 20%;
+  transform: translateX(-50px);
+  max-width: 80px;
 }
 
 .tooltip-content.active {
