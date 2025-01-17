@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const content = tooltip.getAttribute('content');
         const tooltipContent = document.createElement('div');
         tooltipContent.className = 'tooltip-content';
+        let speed = tooltip.getAttribute('speed');
+
+        if (speed === null) {
+            speed = 10;
+        } else {
+            speed = Number(speed)
+        }
         
         // Create a hidden element to measure the full text width
         const measureElement = document.createElement('div');
@@ -35,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (i < content.length) {
                     tooltipContent.textContent += content.charAt(i);
                     i++;
-                    typingTimeout = setTimeout(typeWriter, 10); // speed
+                    typingTimeout = setTimeout(typeWriter, speed); // speed
                 }
             }
             

@@ -5,7 +5,7 @@ heading: Open Source Contributions
 ---
 
 [**Modstore**](https://github.com/d33p0st/modstore)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Modstore is an one stop point for all your data structure needs. Modstore features several new and upgraded data structures such as List(Upgraded), BlockChain (New and Rust Powered), Stack (New) or Queue (New) and much more.
 
@@ -35,7 +35,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**GoopyWoopy**](https://github.com/d33p0st/goopywoopy)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 GoopyWoopy is a python library that contains tools and kits for easy and better programming. All classes and functions in this library follows a thorough Object Oriented Programming approach.
 
@@ -56,7 +56,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**TkOne**](https://github.com/d33p0st/TkOne)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 TkOne is python tkinter and customtkinter library extender that helps create Scrollable GUI with theme selection.
 
@@ -75,7 +75,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Argpi**](https://github.com/d33p0st/argpi)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Argpi is a registration based argument parser that performs the presence-check of the arguments on its own. Every case scenario to be handled must be registered and argpi will automatically carryout the tasks based on the arguments passed by the user. This is an extension of one of my older library: Optioner. Argpi runs on the same engine as Optioner but has an extra layer of code to wrap the bare metal specifications and improve code readability and reduce number of lines it takes to handle argument parsing.
 
@@ -92,7 +92,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Portlive**](https://github.com/d33p0st/portlive)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Portlive is a python library that enables users to install and import any other library simultaneously and dynamically. It also supports creating aliases for those imports such as 'pandas.DataFrame' can be imported and aliased under 'df'. If pandas is not installed it will be installed and made available to the current script
 environment. As python does not natively supports installing a library using a script and importing it to the same library, Portlive comes handy.
@@ -109,7 +109,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Wrapper-bar**](https://github.com/d33p0st/wrapper-bar)
-{: .tooltip position="left-side" }
+{: .tooltip position="left-side" speed="5" }
 {: content="Description:
 Wrapper-Bar is the original module that inspired a full fledged progress bar present in the 'GoopyWoopy' library. Wrapper-Bar uses external progress bar libraries such as 'tqdm' and 'progressbar' and extends their functionality to help create a progress bar that actually runs commands in the background. It supports shell (bash) codes, python codes/scripts, storing output results and logging.
 
@@ -125,7 +125,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Mr-menu**](https://github.com/d33p0st/mr-menu)
-{: .tooltip position="left-side" }
+{: .tooltip position="left-side" speed="5" }
 {: content="Description:
 Mr-menu is a python library to create menus and sub-menus. It can handle creation of a huge tree of menus and easily go back and forth while carrying out tasks related to the menu selected in-between.
 
@@ -148,7 +148,7 @@ Line Breaks here for the page. Will adjust later based on the total number of en
 
  -->
 [**Looger**](https://github.com/d33p0st/looger)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Looger is a rust powered python library for logging. It supports colors and utilizes the speed that rust provides for a seamless user experience.
 
@@ -164,7 +164,7 @@ License: MIT
 Note: Click on the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**rustypath**](https://github.com/d33p0st/rustypath)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Rustypath is a rust crate for managing paths. Instead of dealing with multiple types such as Path and PathBuf, rustypath::RPath combines them all. With easy built-in functions to make your life better.
 
@@ -180,7 +180,7 @@ License: MIT
 Note: Click on the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Deny-Me**](https://github.com/d33p0st/deny-me)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Deny-me is a python library that boasts decorators to help restrict methods inside a class based on several factors.
 
@@ -196,7 +196,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Furypie**](https://github.com/d33p0st/furypie)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 Furypie is just like pip but act as a bridge between your public packages on pypi and private ones on gemfury. You can even have a requirements.txt file with mixed public and private packages and furypie will install the modules for you. Automatically resolves if the package is public or private.
 
@@ -212,7 +212,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**Argrust**](https://github.com/d33p0st/argrust)
-{: .tooltip position="right-side" }
+{: .tooltip position="right-side" speed="5" }
 {: content="Description:
 argrust is the Rust counterpart for Optioner python library and works exactly the same.
 
@@ -225,7 +225,7 @@ License: MIT
 Note: Click on the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**xmenu**](https://github.com/d33p0st/xmenu)
-{: .tooltip position="left-side" }
+{: .tooltip position="left-side" speed="5" }
 {: content="Description:
 xmenu is a rust crate to create dynamic menus in the terminal with navigation support and highlight.
 
@@ -238,7 +238,7 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**gcl**](https://github.com/d33p0st/gcl)
-{: .tooltip position="left-side" }
+{: .tooltip position="left-side" speed="5" }
 {: content="Description:
 gcl is a callable command that replaces git clone. It is written in rust and supports easy argument formats. gcl is capable of cloning private repositories.
 
@@ -254,8 +254,14 @@ License: MIT
 Note: Click the link for source code." }
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 [**s3ssion**](https://github.com/d33p0st/s3ssion)
-{: .tooltip position="left-side" data-weight="10" }
+{: .tooltip position="left-side" data-weight="10" speed="5"}
 {: content="Description:
+s3ssion is a python library to incorporate user login/logout/register feature without any database interaction.
 
+Details:
+Language: Python,
+Available-using: pip (python)
+OS: Independent
+License: MIT
 
 Note: Click on the link for source code." }
