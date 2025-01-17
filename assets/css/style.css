@@ -398,8 +398,9 @@ footer {
 .tooltip-content {
   content: attr(content);
   position: absolute;
-  background-color: #333;
-  color: #fff;
+  background-color: #ffffffd8;
+  /* color: #000000; */
+  /* color: ; */
   padding: 10px;
   border-radius: 5px;
   white-space: pre-wrap;
