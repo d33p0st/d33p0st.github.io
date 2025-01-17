@@ -388,7 +388,6 @@ footer {
   color:#f76a6a;
 }
 
-
 /* Tooltip for link popups */
 .tooltip {
   position: relative;
@@ -396,7 +395,7 @@ footer {
   cursor: pointer;
 }
 
-.tooltip::after {
+.tooltip-content {
   content: attr(content);
   position: absolute;
   background-color: #333;
@@ -417,32 +416,33 @@ footer {
   pointer-events: none;
 }
 
-.tooltip[position="top"]::after {
+.tooltip[position="top"] .tooltip-content {
   bottom: 125%;
   left: 70%;
   transform: translateX(-50%);
 }
-.tooltip[position="right-side"]::after {
+.tooltip[position="right-side"] .tooltip-content {
   top: 50%;
   left: 125%;
   transform: translateY(-50%);
 }
-.tooltip[position="left-side"]::after {
+.tooltip[position="left-side"] .tooltip-content {
   top: 50%;
   right: 90%;
   transform: translateY(-50%);
 }
 
-.tooltip:hover::after {
+.tooltip-content.active {
   opacity: 1;
   visibility: visible;
 }
 
+
 .opensource {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  gap: 40px;
-  box-shadow: #333;
+  padding: 50px;
+  gap: 30px;
+  position: relative;
 }
-
