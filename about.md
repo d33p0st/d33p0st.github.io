@@ -14,7 +14,7 @@ heading: About Deep
       </p>
     </div>
     <div class="image-section">
-      <img src="/assets/images/favicon.jpg" alt="Descriptive Alt Text">
+      <img class="about-pic" src="/assets/images/favicon.jpg" alt="Descriptive Alt Text">
     </div>
   </div>
 </div>

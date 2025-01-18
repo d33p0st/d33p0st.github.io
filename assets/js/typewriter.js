@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tooltips = document.querySelectorAll('.tooltip');
+
+    const now = new Date();
+    const hour = now.getHours();
     
     tooltips.forEach(tooltip => {
         const content = tooltip.getAttribute('content');
@@ -22,8 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(measureElement);
         
         // Set the width of the tooltip content to match the full text
-        const textColor = tooltip.getAttribute('tcolor') || "#000000";
-        tooltipContent.style.color = textColor;
+        if (hour >= 19 || hour < 7) {
+            const textColor = tooltip.getAttribute('tcolor') || "#ffffff";
+            tooltipContent.style.color = textColor;
+        } else {
+            const textColor = tooltip.getAttribute('tcolor') || "#000000";
+            tooltipContent.style.color = textColor;
+        }
+        
+        
         tooltipContent.style.width = measureElement.offsetWidth + 'px';
         document.body.removeChild(measureElement);
         

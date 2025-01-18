@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-html">
     <head></head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@ layout: default
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
     </head>
-    <body>
+    <body class="page-body">
         <!-- assign variables -->
         {% assign github = site.data.social | where: "platform", "github" | first %}
         {% assign instagram = site.data.social | where: "platform", "instagram" | first %}
@@ -74,7 +74,7 @@ layout: default
          </header>
 
          <main class="page-main-content">
-            <article>
+            <article class="page-article">
                 <h1 class="page-title">{{ page.heading }}</h1>
                 <hr class="title-split">
                 <div class="page-content">
@@ -96,9 +96,10 @@ layout: default
             <p>This page is created with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a>, HTML, CSS, Javascript and Markdown.</p>
             <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}">{{ site.username }}</a>. All rights reserved.</p>
          </footer>
-         <script src="{{ '/assets/js/syntax-highlighter.js' }}"></script>
-         <script src="{{ '/assets/js/signature-cycle.js' }}"></script>
+         <script src="/assets/js/syntax-highlighter.js"></script>
+         <script src="/assets/js/signature-cycle.js"></script>
          <!-- <script src="{{ '/assets/js/tooltip.js' }}"></script> -->
-         <script src="{{ '/assets/js/typewriter.js' }}"></script> 
+         <script src="/assets/js/typewriter.js"></script> 
+         <script src="/assets/js/light-dark-switch.js"></script>
     </body>
 </html>
