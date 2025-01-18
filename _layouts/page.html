@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="page-html">
+<html lang="en" class="html">
     <head></head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,88 +18,92 @@ layout: default
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
     </head>
-    <body class="page-body">
+    <body class="body">
         <!-- assign variables -->
         {% assign github = site.data.social | where: "platform", "github" | first %}
         {% assign instagram = site.data.social | where: "platform", "instagram" | first %}
         {% assign linkedin = site.data.social | where: "platform", "linkedin" | first %}
 
-        <!-- Page Header Container -->
-         <header class="page-header">
-            <div class="page-header-container">
-                <!-- Left Logo -->
-                <div class="page-name-logo">
-                    <a href="/">
-                        <img id="cycle-image-sign" src="{{ '/assets/images/sign3.gif' }}" alt="signature">
-                    </a>
-                </div>
-                <!-- Right Navigation -->
-                <nav class="page-nav-bar">
-                    <div class="page-nav-links">
-                        {% assign site_data = site.data %}
-                        {% assign page_url_name = page.url | remove: "/" | remove: ".html" %}
-                        {% assign nav_data = site_data[page_url_name] %}
-                        {% if nav_data %}
-                            <!-- {{ nav_data }} -->
-                            {% for page_name in nav_data.links %}
-                                {% assign link = site.pages | where: "title", page_name | first %}
-                                {% assign name = link.name | remove: ".md" %}
-                                {% assign data = site_data[name] %}
-                                <a href="{{ link.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page_name }}</a>
-                            {% endfor %}
+        <div class="page-layout">
+            <!-- Page Header Container -->
+            <header class="page-header">
+                <div class="page-header-container">
+                    <!-- Left Logo -->
+                    <div class="page-name-logo">
+                        <a href="/">
+                            <img id="cycle-image-sign" src="{{ '/assets/images/sign3.gif' }}" alt="signature">
+                        </a>
+                    </div>
+                    <!-- Right Navigation -->
+                    <nav class="page-nav-bar">
+                        <div class="page-nav-links">
+                            {% assign site_data = site.data %}
+                            {% assign page_url_name = page.url | remove: "/" | remove: ".html" %}
+                            {% assign nav_data = site_data[page_url_name] %}
+                            {% if nav_data %}
+                                <!-- {{ nav_data }} -->
+                                {% for page_name in nav_data.links %}
+                                    {% assign link = site.pages | where: "title", page_name | first %}
+                                    {% assign name = link.name | remove: ".md" %}
+                                    {% assign data = site_data[name] %}
+                                    <a href="{{ link.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page_name }}</a>
+                                {% endfor %}
 
-                            {% for page_name in nav_data.external %}
-                                {% assign link = site.pages | where: "title" , page_name | first %}
-                                <a href="{{ link.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ link.description }}" speed="15" tcolor="#f6185e">{{ page_name }}</a>
-                            {% endfor %}
-                        {% else %}
-                            <!-- if nav data for current page does not exist -->
-                            {% for page in site.pages %}
-                                {% if page.title and page.layout != "homepage" %}
-                                    {% if page.layout == "redirect" %}
-                                        <!-- if redirect -->
-                                        <a href="{{ page.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ page.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
-                                    {% else %}
-                                        <!-- if page -->
-                                        {% assign name = page.name | remove: ".md" %}
-                                        {% assign data = side_data[name] %}
-                                        <a href="{{ page.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
+                                {% for page_name in nav_data.external %}
+                                    {% assign link = site.pages | where: "title" , page_name | first %}
+                                    <a href="{{ link.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ link.description }}" speed="15" tcolor="#f6185e">{{ page_name }}</a>
+                                {% endfor %}
+                            {% else %}
+                                <!-- if nav data for current page does not exist -->
+                                {% for page in site.pages %}
+                                    {% if page.title and page.layout != "homepage" %}
+                                        {% if page.layout == "redirect" %}
+                                            <!-- if redirect -->
+                                            <a href="{{ page.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ page.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
+                                        {% else %}
+                                            <!-- if page -->
+                                            {% assign name = page.name | remove: ".md" %}
+                                            {% assign data = side_data[name] %}
+                                            <a href="{{ page.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
+                                        {% endif %}
                                     {% endif %}
-                                {% endif %}
-                            {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="page-main-content">
+                <article class="page-article">
+                    <h1 class="page-title">{{ page.heading }}</h1>
+                    <hr class="title-split">
+                    <div class="page-content">
+
+                        <!-- If the page is open source -->
+                        {% if page.title == "Open Source" %}
+                            <p>Hover over an item to see description.</p>
+                            <div class="opensource">
+                                {{content}}
+                            </div>
+                        {% else %}
+                            {{content}}
                         {% endif %}
                     </div>
-                </nav>
-            </div>
-         </header>
-
-         <main class="page-main-content">
-            <article class="page-article">
-                <h1 class="page-title">{{ page.heading }}</h1>
-                <hr class="title-split">
-                <div class="page-content">
-
-                    <!-- If the page is open source -->
-                    {% if page.title == "Open Source" %}
-                        <p>Hover over an item to see description.</p>
-                        <div class="opensource">
-                            {{content}}
-                        </div>
-                    {% else %}
-                        {{content}}
-                    {% endif %}
-                </div>
-            </article>
-         </main>
-
-         <footer class="page-footer">
-            <p>This page is created with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a>, HTML, CSS, Javascript and Markdown.</p>
-            <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}">{{ site.username }}</a>. All rights reserved.</p>
-         </footer>
+                </article>
+            </main>
+            <footer class="page-footer">
+                <p>This page is created with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a>, HTML, CSS, Javascript and Markdown.</p>
+                <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}">{{ site.username }}</a>. All rights reserved.</p>
+            </footer>
+        </div>
          <script src="/assets/js/syntax-highlighter.js"></script>
          <script src="/assets/js/signature-cycle.js"></script>
          <!-- <script src="{{ '/assets/js/tooltip.js' }}"></script> -->
          <script src="/assets/js/typewriter.js"></script> 
-         <script src="/assets/js/light-dark-switch.js"></script>
+         <script src="/assets/js/darkmode.js"></script>
+         <script>
+            enableDarkMode(19, 0, 0, 2, 0, 0, 3600000, null);
+         </script>
     </body>
 </html>

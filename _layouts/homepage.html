@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@ layout: default
         <link rel="icon" href="/favicon.png" type="image/png">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
-    <body>
+    <body class="body">
         <!-- Assign github_url from data.social -->
         {% assign github_url = site.data.social | where: "platform", "github" | first %}
        <!-- Whole Screen -->
@@ -67,6 +67,10 @@ layout: default
 
             </main>
         </div>
-        <script src="/assets/js/light-dark-switch.js"></script>
+        <script src="/assets/js/darkmode.js"></script>
+        <script src="/assets/js/homepage-dark-mode-specific.js"></script>
+        <script>
+            enableDarkMode(19, 0, 0, 7, 0, 0, 3600000, homepageSpecific);
+        </script>
     </body>
 </html>

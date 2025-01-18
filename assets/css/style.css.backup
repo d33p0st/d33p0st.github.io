@@ -1,0 +1,535 @@
+/* Animation for an image to bounce */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animation for an image to do a cartoon pop */
+@keyframes cartoon-pop {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Animation for a link to bounce */
+@keyframes bounce-link {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* All Body and html unless given otherwise */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'League Spartan';
+  background: #000;
+}
+
+.page-body,
+.page-html {
+  background-color: white;
+  background: white;
+}
+
+.dark-mode .page-body, .page-html {
+  background-color: #000;
+  background: #000;
+}
+
+/* HomePage Type Page Full Size Container */
+.layout {
+  display: flex;
+  height: 100vh; /* Full height viewport */
+}
+/* Left Side of the container */
+.left {
+  width: 100px; /* Fixed width for the sidebar */
+  padding: 20px;
+  overflow-y: auto; /* Scrollable if content overflows */
+  background-color: #ffffff;
+}
+.dark-mode .left {
+  background-color: #000;
+}
+/* Right side of the container */
+.container {
+  flex-grow: 1; /* Take up remaining space */
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto; /* Scrollable if content overflows */
+}
+.dark-mode .container {
+  background-color: #000;
+}
+/* Profile Picture in home page */
+.logo {
+  position: relative;
+}
+.logo img {
+  display: block;
+  width: 85px;
+  height: 85px;
+  border-radius: 15px;
+  margin-bottom: 7px;
+}
+.logo:hover img {
+  animation: bounce 1s ease;
+}
+/* Name in the home page */
+.name img {
+  width: 85px;
+  height: 85px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+.name img:hover {
+  animation: bounce 1s ease;
+}
+/* Social Links in the home page */
+.socials {
+  margin-bottom: 15;
+}
+.socials a {
+  font-size: 24px;
+  color: #000; /* Or any color you prefer */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dark-mode .socials a {
+  color: white;
+}
+/* Social Icons in home page */
+.fab:hover {
+  animation: bounce-link 1s ease;
+}
+/* Individual Icon colors */
+.fa-github:hover {
+  color: #000;
+}
+.dark-mode .fa-github:hover {
+  color: white;
+}
+.fa-instagram:hover {
+  background: linear-gradient(45deg, 
+  #feda75, 
+  #fd1d1d, /* Red */
+  #833ab4, /* Purple */
+  #405de6  /* Blue */
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* animation: gradient-animation 8s ease infinite; */
+}
+.fa-linkedin:hover {
+  color: #3b85ff;
+}
+
+/* Underlining a text */
+.underline {
+  display: inline-block;
+  position: relative;
+  font-size: 90%;
+}
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #000000; /* Color of the underline */
+  transition: width 345ms ease-out; /* Adjust duration and timing */
+}
+.dark-mode .underline::after {
+  background-color: white;
+}
+.underline:hover::after {
+  width: 100%; /* Full width when hovered */
+}
+
+.page-links {
+  margin-top: 10px;
+  width: 50px;
+}
+
+.page-item a {
+  margin-left: 0px;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: #000;
+}
+.dark-mode .page-item a {
+  color: white;
+}
+.page-item a:hover {
+  font-weight: bold;
+}
+
+.title-split {
+  border: none;
+  height: 5px; /* Thickness of the line */
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 165, 0, 0.7), rgba(255, 105, 180, 0.5));
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+.dark-mode .title-split {
+  background: linear-gradient(to right, rgba(0, 247, 255, 0.5), rgba(0, 255, 162, 0.7), rgba(102, 39, 239, 0.5));
+}
+
+.page-name-logo img {
+  width: 200px;
+  height: 100px;
+}
+.page-name-logo img:hover {
+  animation: bounce 1s ease;
+}
+
+.page-header {
+  padding: 20px;
+}
+
+.dark-mode .page-body {
+  background-color: #000;
+}
+/* Flexbox layout for header */
+.page-header-container {
+  display: flex;
+  justify-content: space-between;  /* Space between logo and navigation */
+  align-items: center;            /* Vertically center the items */
+  background-color: white;
+}
+.dark-mode .page-header-container {
+  background-color: #000;
+}
+
+.page-nav-bar {
+  display: flex;                  /* Use flexbox for the navigation */
+  justify-content: flex-end;      /* Align the navigation to the right */
+}
+
+.page-nav-links {
+  display: flex;                  /* Align navigation links in a row */
+  gap: 30px;                      /* Space between the links */
+}
+
+.page-nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 25px;
+  display: inline-block;
+}
+.dark-mode .page-nav-links a {
+  color: white;
+}
+
+.page-nav-links a:hover {
+  color: #f6185e;                /* Change color on hover */
+  animation: bounce-link 1s ease-in-out infinite;
+}
+
+.bouncel {
+  display: inline-block;
+}
+
+.bouncel:hover {
+  animation: bounce-link 1s ease;
+}
+
+.dark-mode .page-header {
+  background-color: #000;
+}
+/* Centered container resembling A4 width */
+.page-main-content {
+  width: 794px;          /* A4 page width in pixels (approximately 210mm) */
+  margin: 20px auto;     /* Center horizontally with vertical margin */
+  padding: 40px;         /* Add padding around the content */
+  background-color: #fff; /* White background for content */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Optional shadow for a clean card look */
+  border-radius: 5px;    /* Slight rounding for visual appeal */    /* Prevents content overflow */
+  margin-top: 0px;
+  padding-top: 20px;
+  overflow: visible;
+}
+.dark-mode .page-main-content {
+  background-color: black;
+  background: black;
+}
+
+/* Title styling */
+.page-title {
+  font-size: 2rem;       /* Larger title size */
+  font-weight: bold;     /* Make title bold */
+  /* color: #3b85ff;           Dark color for text */
+  color: #000000;
+  text-align: left;      /* Align the title to the left */
+  margin-bottom: 20px;   /* Space below the title */
+  font-style: italic;
+}
+.dark-mode .page-title {
+  color: white;
+}
+
+/* Content styling */
+.page-content {
+  font-size:large;       /* Standard font size for content */
+  color: #000000;           /* Neutral color for readability */
+  line-height: 1.8;      /* Add space between lines for better readability */
+  text-align: justify;   /* Justify text for equivalence alignment */
+  hyphens: auto;         /* Enable hyphenation for better justification */
+  word-wrap: break-word; /* Prevent long words from overflowing */
+  background-color: white;
+}
+.dark-mode .page-content {
+  color: white;
+  background-color: black;
+  background: black;
+}
+.page-content h1, h2, h3, h4, h5, h6 {
+  color: #3b85ff;
+}
+.page-footer a,
+.page-content a {
+  color: #3b85ff;
+  text-decoration: underline;
+  font-weight: normal;
+  text-underline-offset: 6px;
+  display: inline-block;
+}
+.page-footer a:hover,
+.page-content a:hover {
+  color: #FF5A3C;
+  animation: bounce-link 1s ease-in-out infinite;
+}
+.page-footer {
+  background-color: white;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  font-family: 'League Spartan';
+}
+.dark-mode .page-footer {
+  background-color: black;
+  color: white;
+  background: #000;
+}
+.about-pic {
+  /* width: 794px; */
+  width: 300px;
+  
+}
+.page-content li strong {
+  text-decoration: none;
+}
+
+pre {
+  background-color: #eceaea;
+  /* padding: 10px; */
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family:monospace;
+}
+.dark-mode pre {
+  background-color: #474747;
+}
+code {
+  color: #3b85ff;
+  /* background-color: #e9e7e7; */
+  background-color: #eceaea;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.dark-mode code {
+  background-color: #474747;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .page-header-container {
+      /* flex-direction: column;     */
+      /* Stack logo and navigation on small screens */
+      align-items: flex-start;
+  }
+
+  .page-nav-links {
+      /* flex-direction: column; */
+      padding-left: 0;
+  }
+
+  .page-nav-links a {
+      margin: 10px 0;            /* Space between items when stacked */
+      font-size: 20px;
+  }
+
+  .page-name-logo img {
+      height: 40px;              /* Smaller logo size on mobile */
+  }
+}
+
+@media (max-width: 500px) {
+  .page-header-container {
+      flex-direction: column;    
+      /* Stack logo and navigation on small screens */
+      align-items: flex-start;
+  }
+
+  .page-nav-links {
+      /* flex-direction: column; */
+      padding-left: 0;
+  }
+
+  .page-nav-links a {
+      margin: 10px 0;            /* Space between items when stacked */
+      font-size: 20px;
+  }
+
+  .page-name-logo img {
+      height: 40px;              /* Smaller logo size on mobile */
+  }
+}
+
+/* Custom purple and orange theme for Highlight.js */
+.hljs {
+  /* background: #dededf; Dark purple background */
+  color: #3b85ff; /* Orange text */
+  /* font-weight:unset; */
+  font-size: 90%;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: #8f61f2; /* Orange highlights */
+  /* font-style:italic; */
+  font-weight:530;
+  /* font-size:90%; */
+}
+.hljs-comment,
+.hljs-quote {
+  color: #bebebe; /* Purple comment text */
+}
+.hljs-string {
+  color: #DA70D6; /* Light purple for strings */
+}
+.hljs-number {
+  color: #D2691E; /* Orange brown for numbers */
+}
+.hljs-title {
+  color:#f76a6a;
+}
+
+/* Tooltip for link popups */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-content {
+  content: attr(content);
+  position: absolute;
+  background-color: #ffffffd8;
+  /* color: #000000; */
+  /* color: ; */
+  /* color: white; */
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  text-align: left;
+  width: max-content;
+  max-width: 500px;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+.dark-mode .tooltip-content {
+  background-color: #000000b4;
+  /* text color is maintained by java script */
+  /* refer typewriter.js or add "tcolor" attribute with */
+  /* the "tooltip" class */
+}
+
+.tooltip[position="top"] .tooltip-content {
+  bottom: 125%;
+  left: 70%;
+  transform: translateX(-50%);
+}
+.tooltip[position="right-side"] .tooltip-content {
+  top: 50%;
+  left: 125%;
+  transform: translateY(-50%);
+}
+.tooltip[position="left-side"] .tooltip-content {
+  top: 50%;
+  right: 125%;
+  transform: translateY(-50%);
+}
+.tooltip[position="bottom"] .tooltip-content {
+  top: 125%;
+  left: 70%;
+  transform: translateX(-50px);
+}
+.tooltip[position="nav-link"] .tooltip-content {
+  top: 200%;
+  left: 20%;
+  transform: translateX(-50px);
+  max-width: 80px;
+}
+
+.tooltip-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.opensource {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 30px;
+  position: relative;
+}
