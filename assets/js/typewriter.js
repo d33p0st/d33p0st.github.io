@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set the width of the tooltip content to match the full text
         if (hour >= 19 || hour < 7) {
-            const textColor = tooltip.getAttribute('tcolor') || "#ffffff";
+            const textColor = tooltip.getAttribute('tcolor') || "#fff";
             tooltipContent.style.color = textColor;
         } else {
-            const textColor = tooltip.getAttribute('tcolor') || "#000000";
+            const textColor = tooltip.getAttribute('tcolor') || "#000";
             tooltipContent.style.color = textColor;
         }
         

@@ -492,8 +492,10 @@ code {
 }
 .tooltip[position="bottom"] .tooltip-content {
     top: 125%;
+    /* left: 40%; */
+    /* left:auto; */
     left: 70%;
-    transform: translateX(-50px);
+    transform: translateX(-50%);
 }
 .tooltip[position="nav-link"] .tooltip-content {
     top: 200%;
