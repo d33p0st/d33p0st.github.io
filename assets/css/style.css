@@ -140,7 +140,15 @@ body, html {
   color: white;
 }
 .fa-instagram:hover {
-  color: #890aff;
+  background: linear-gradient(45deg, 
+  #feda75, 
+  #fd1d1d, /* Red */
+  #833ab4, /* Purple */
+  #405de6  /* Blue */
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  /* animation: gradient-animation 8s ease infinite; */
 }
 .fa-linkedin:hover {
   color: #3b85ff;
@@ -168,15 +176,6 @@ body, html {
 .underline:hover::after {
   width: 100%; /* Full width when hovered */
 }
-
-/* .homepage-title {
-  color: #4720c9;
-}
-
-.homepage-title-split {
-  width: 50%;
-  margin-left: 0px;
-} */
 
 .page-links {
   margin-top: 10px;
