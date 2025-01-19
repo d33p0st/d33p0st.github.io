@@ -5,7 +5,7 @@ function homepageSpecific(str) {
 
     const nameImageElement = document.getElementById('homepage-name-pic');
 
-    if (str === "dark") {
+    if (str === "added") {
         if (nameImageElement !== null) {
             nameImageElement.src = '/assets/images/name-dark.gif';
         }
