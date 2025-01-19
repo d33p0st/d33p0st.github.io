@@ -4,19 +4,36 @@ layout: default
 
 <!DOCTYPE html>
 <html lang="en" class="html">
-    <head></head>
+    <head>
+        <!-- Metadata -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
         <title>{{ page.title }}</title>
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet">
+        
+        <!-- Icons -->
         <link rel="icon" href="/favicon.gif" type="image/gif">
         <link rel="icon" href="/favicon.png" type="image/png">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- pre-load scripts -->
+         <!-- highlighter.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+         <!-- python syntax from highlighter.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+         <!-- toggle-engine.js: for dark mode toggle -->
+        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.1/dist/toggle-engine.js"></script>
+         <!-- syntax highlight activator -->
+        <script src="/assets/js/syntax-highlighter.js"></script>
+         <!-- signature cycle -->
+        <script src="/assets/js/signature-cycle.js"></script>
     </head>
     <body class="body">
         <!-- assign variables -->
@@ -31,7 +48,7 @@ layout: default
                     <!-- Left Logo -->
                     <div class="page-name-logo">
                         <a href="/">
-                            <img id="cycle-image-sign" src="{{ '/assets/images/sign3.gif' }}" alt="signature">
+                            <img id="cycle-image-sign" src="/assets/images/sign3.gif" alt="signature">
                         </a>
                     </div>
                     <!-- Right Navigation -->
@@ -93,16 +110,25 @@ layout: default
                 </article>
             </main>
             <footer class="page-footer">
-                <p>This page is created with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a>, HTML, CSS, Javascript and Markdown.</p>
-                <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}">{{ site.username }}</a>. All rights reserved.</p>
+                <p>This page is created with <a href="https://jekyllrb.com" target="_blank" class="tooltip" position="top" content="An open-source tool that creates static websites using plain text documents." speed="15">Jekyll</a>,
+                    <a href="https://www.ruby-lang.org/en/" target="_blank" class="tooltip" position="top" content="An object-oriented programming language." speed="15">Ruby</a>, HTML, CSS, Javascript and Markdown.
+                </p>
+                <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="tooltip" position="top" content="@Owner." speed="55">{{ site.username }}</a>. All rights reserved.</p>
             </footer>
         </div>
-         <script src="/assets/js/syntax-highlighter.js"></script>
-         <script src="/assets/js/signature-cycle.js"></script>
-         <script src="/assets/js/typewriter.js"></script> 
-         <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.1/dist/toggle-engine.js"></script>
+
+        <!-- Body Scripts -->
          <script>
+            // dark mode toggle
             toggle(19, 0, 0, 7, 0, 0, 'dark-mode', 3600000, null);
          </script>
+
+         <!-- If the concerned page is opensource.md -->
+         {% if page.title == "Open Source" %}
+            <script src="/assets/js/opensource-popup-position.js"></script>
+         {% endif %}
+         
+         <!-- typewriter effect for all available links. -->
+         <script src="/assets/js/typewriter.js"></script>
     </body>
 </html>

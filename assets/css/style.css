@@ -366,51 +366,6 @@ code {
     background-color: #474747;
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    .page-header-container {
-        /* flex-direction: column;     */
-        /* Stack logo and navigation on small screens */
-        align-items: flex-start;
-    }
-  
-    .page-nav-links {
-        /* flex-direction: column; */
-        padding-left: 0;
-    }
-  
-    .page-nav-links a {
-        margin: 10px 0;            /* Space between items when stacked */
-        font-size: 20px;
-    }
-  
-    .page-name-logo img {
-        height: 40px;              /* Smaller logo size on mobile */
-    }
-}
-  
-@media (max-width: 500px) {
-    .page-header-container {
-        flex-direction: column;    
-        /* Stack logo and navigation on small screens */
-        align-items: flex-start;
-    }
-  
-    .page-nav-links {
-        /* flex-direction: column; */
-        padding-left: 0;
-    }
-  
-    .page-nav-links a {
-        margin: 10px 0;            /* Space between items when stacked */
-        font-size: 20px;
-    }
-  
-    .page-name-logo img {
-        height: 40px;              /* Smaller logo size on mobile */
-    }
-}
-
 /* Custom purple and orange theme for Highlight.js */
 .hljs {
     /* background: #dededf; Dark purple background */
@@ -511,13 +466,86 @@ code {
   
 .opensource {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     gap: 30px;
     position: relative;
 }
 .dark-mode .opensource {
     background-color: #000;
     color: white;
+}
+
+
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .page-layout {
+        max-width: 100vh;
+    }
+    .page-header-container {
+        /* flex-direction: column;     */
+        /* Stack logo and navigation on small screens */
+        align-items: flex-start;
+    }
+  
+    .page-nav-links {
+        /* flex-direction: column; */
+        padding-left: 0;
+    }
+  
+    .page-nav-links a {
+        margin: 10px 0;            /* Space between items when stacked */
+        font-size: 20px;
+    }
+  
+    .page-name-logo img {
+        height: 40px;              /* Smaller logo size on mobile */
+    }
+    .page-main-content {
+        width: 600px;
+    }
+    .tooltip[position="nav-link"] .tooltip-content {
+        max-width: 80px;
+    }
+    .tooltip-content {
+        max-width: 350px;
+        top: auto;
+        /* position: absolute; */
+        /* transform-origin: center; */
+        transform: translateY(50%);
+    }
+}
+  
+@media (max-width: 500px) {
+    .page-layout {
+        max-width: 100vh;
+    }
+    .page-header-container {
+        flex-direction: column;    
+        /* Stack logo and navigation on small screens */
+        align-items: flex-start;
+    }
+  
+    .page-nav-links {
+        /* flex-direction: column; */
+        padding-left: 0;
+    }
+  
+    .page-nav-links a {
+        margin: 10px 0;            /* Space between items when stacked */
+        font-size: 20px;
+    }
+  
+    .page-name-logo img {
+        height: 40px;              /* Smaller logo size on mobile */
+    }
+    .page-main-content {
+        width: 400px;
+    }
 }

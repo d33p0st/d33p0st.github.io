@@ -5,12 +5,22 @@ const images = [
     // '/assets/images/sign4.gif'
 ];
 
+// preload the images
+const preloadedImages = images.map(src => {
+    const img = new Image();
+    img.src = src;
+    return img;
+})
+
 let currentImageIndex = 1;
-const imageElement = document.getElementById('cycle-image-sign')
 
 function changeImage() {
+
+
+    let imageElement = document.getElementById('cycle-image-sign')
+
     currentImageIndex = (currentImageIndex + 1) % images.length;
-    imageElement.src = images[currentImageIndex];
+    imageElement.src = preloadedImages[currentImageIndex].src;
 }
 
 setInterval(changeImage, 5000);
