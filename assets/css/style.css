@@ -51,6 +51,11 @@
     height: 100vh; /* Full height viewport */
 }
 
+.layout-custom {
+    display: flex;
+    height: 89vh;
+}
+
 /* Left Side of the container */
 .left {
     width: 100px; /* Fixed width for the sidebar */
@@ -60,6 +65,7 @@
 }
 .dark-mode .left {
     background-color: #000;
+    color: white;
 }
 
 /* Right side of the container */
@@ -71,8 +77,12 @@
 }
 .dark-mode .container {
     background-color: #000;
+    color: white;
 }
 
+.container a {
+    color: #3b85ff;
+}
 
 /* Profile Picture in home page */
 .logo {
@@ -703,4 +713,10 @@ code[class*="language-"] {
     .page-main-content {
         width: 400px;
     }
+}
+
+.notfound-top-stmt {
+    padding-top: 20%;
+    text-align: center;
+    line-height: 1.5;
 }

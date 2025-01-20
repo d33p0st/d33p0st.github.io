@@ -3,6 +3,97 @@ layout: default
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="en" class="html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ site.title }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+        <link rel="icon" href="/favicon.gif" type="image/gif">
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.2/dist/toggle-engine.js"></script>
+        <script src="/assets/js/homepage-dark-mode-specific.js"></script>
+    </head>
+    <body class="body">
+        <!-- Assign github_url from data.social -->
+        {% assign github_url = site.data.social | where: "platform", "github" | first %}
+       <!-- Whole Screen -->
+        <div class="layout-custom">
+            <!-- left split -->
+            <div class="left">
+                <!-- profile picture -->
+                <div class="logo">
+                    <a href="{{ github_url.url }}" target="_blank">
+                        <img src="/assets/images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <!-- Signature -->
+                <div class="name">
+                    <a href="{{ github_url.url }}" target="_blank">
+                        <img id="homepage-name-pic" src="/assets/images/name-light.gif" alt="name">
+                    </a>
+                </div>
+                <!-- socials -->
+                <div class="socials">
+                    {% for link in site.data.social %}
+                    <a href="{{ link.url }}" target="_blank">
+                        <i class="fab fa-{{ link.platform }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+                <!-- navigation links -->
+            </div>
+
+            <!-- Right split -->
+            <main class="container">
+
+                {% assign current_url = request.path %}
+                {% assign path_segments = current_url | split: "/" %}
+                {% assign path_size = path_segments | size %}
+                {% assign slicer = path_size | minus: 1 %}
+                {% assign previous_segments = path_segments | slice: 0, slicer %}
+                {% assign previous_url = previous_segments | join: "/" %}
+                {% if previous_url == "" %}
+                    {% assign previous_url = "/" %}
+                {% endif %}
+                
+                <div class="notfound-top-stmt">
+                    <strong>This website is unable to find this page or this page might be under development!</strong><br>
+                    Maybe <a id="previous-path" href="{{ previous_url }}" class="tooltip" position="top" content="{{ site.url }}{{ previous_url }}" speed="15">go back</a> and try a different page for the time being?<br>
+                    Error: <strong>404</strong> Not Found.
+                    {{ current_url }}
+                </div>
+
+            </main>
+            
+        </div>
+        <footer class="page-footer">
+            <p>This page is created with <a href="https://jekyllrb.com" target="_blank" class="tooltip" position="top" content="An open-source tool that creates static websites using plain text documents." speed="15">Jekyll</a>,
+                <a href="https://www.ruby-lang.org/en/" target="_blank" class="tooltip" position="top" content="An object-oriented programming language." speed="15">Ruby</a>, HTML, CSS, Javascript and Markdown.
+            </p>
+            <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="tooltip" position="top" content="@Owner." speed="55">{{ site.username }}</a>. All rights reserved.</p>
+        </footer>
+        <!-- typewriter effect for all available links. -->
+        
+        <script>
+            toggle(19, 0, 0, 7, 0, 0, 'dark-mode', 60000, homepageSpecific);
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentPath = window.location.pathname;
+                const pathSegments = currentPath.split('/').filter(segment => segment);
+                const previousPath = '/' + pathSegments.slice(0, -1).join('/');
+                
+                const link = document.getElementById('previous-path');
+                const displayPath = previousPath === '' ? '/' : previousPath;
+                link.href = displayPath;
+                // link.textContent = window.location.origin + displayPath;
+                link.setAttribute('content', window.location.origin + displayPath);
+            });
+        </script>
+        <script src="/assets/js/typewriter.js"></script>
+    </body>
 </html>
