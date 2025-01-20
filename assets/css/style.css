@@ -352,6 +352,11 @@ pre[class*="language-"] {
     padding: 16px !important;
     margin: 16px 0 !important;
     overflow-x: auto !important;
+    text-shadow: none !important;
+    -webkit-text-shadow: none !important;
+}
+.dark-mode pre[class*="language-"] {
+    background-color: #000000 !important;
 }
 
 /* Code language label (e.g., "python") */
@@ -367,13 +372,31 @@ pre[class*="language-"]::before {
     font-family: monospace !important;
 }
 
+.dark-mode pre[class*="language-"]::before {
+    background: #000 !important;
+}
+
 /* Code content */
 code[class*="language-"] {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important; 
     font-size: 14px !important;
     line-height: 1.5 !important;
     color: black !important;
+    text-shadow: none !important;
+    -webkit-text-shadow: none !important;
     /* padding: 0% !important; */
+}
+.dark-mode pre[class*="language-"] code[class*="language-"] {
+    color: white !important;
+}
+
+.token {
+    text-shadow: none !important;
+    -webkit-text-shadow: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
 
 /* Keywords */
@@ -397,6 +420,9 @@ code[class*="language-"] {
     color: #bdbaba !important;
     font-style: italic !important;
 }
+.dark-mode .token.cdata, .token.comment, .token.doctype, .token.prolog {
+    color: #757575 !important;
+}
 
 .token.class-name {
     color: #3c7dff !important;
@@ -405,6 +431,9 @@ code[class*="language-"] {
 /* Strings */
 .token.string {
     color: #575757 !important;
+}
+.dark-mode .token.string {
+    color: #969696 !important;
 }
 
 /* Function names */
@@ -507,7 +536,10 @@ code[class*="language-"] {
     height: 88vh; /* Full height viewport */
 
 }
-
+.dark-mode .doc-layout {
+    background-color: black;
+    color: white;
+}
 .doc-left {
     width: 140px; /* Fixed width for the sidebar */
     padding: 20px;
@@ -516,6 +548,7 @@ code[class*="language-"] {
 }
 .dark-mode .doc-left {
     background-color: #000;
+    color: white;
 }
 
 .doc-name {
@@ -525,6 +558,9 @@ code[class*="language-"] {
 .doc-name-link {
     color: #000;
     text-decoration: none;
+}
+.dark-mode .doc-name-link {
+    color: white;
 }
 .doc-name-link:hover {
     color: #FF5A3C;
@@ -546,6 +582,9 @@ code[class*="language-"] {
     text-decoration: none;
     font-size: 14px;
 }
+.dark-mode .doc-nav-link {
+    color: white;
+}
 .doc-nav-link:hover {
     color: #3b85ff;
 }
@@ -564,6 +603,7 @@ code[class*="language-"] {
 }
 .dark-mode .doc-main-content {
     background-color: #000;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.551);
 }
 
 .doc-content {

@@ -92,12 +92,7 @@ layout: default
         <!-- typewriter effect for all available links. -->
         <script src="/assets/js/typewriter.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                console.log('Checking if Prism is loaded:', typeof Prism !== 'undefined');
-                if(typeof Prism !== 'undefined') {
-                    Prism.highlightAll();
-                }
-            });
+            toggle(19, 0, 0, 7, 0, 0, 'dark-mode', 60000, null);
         </script>
     </body>
 </html>
