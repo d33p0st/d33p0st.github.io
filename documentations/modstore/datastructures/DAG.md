@@ -8,4 +8,5 @@ release: ""
 permalink: docs/modstore/data-structures/dag/
 exclude: 'true'
 identifier: dag-modstore
+order: 2
 ---

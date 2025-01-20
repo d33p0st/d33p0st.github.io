@@ -8,6 +8,7 @@ release: ""
 permalink: docs/modstore/data-structures/blockchain/
 exclude: 'true'
 identifier: blockchain-modstore
+order: 1
 ---
 
 The blockchain data structure is powered by Rust backend and brings speed and reliability with it. As the basic need for a blockchain is to be tamper-resistant and decentralized, the `BlockChain` class provides all of them along with a proof-of-work concept implemented using an integer difficulty factor.
