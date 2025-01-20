@@ -14,7 +14,7 @@ layout: default
         <link rel="icon" href="/favicon.gif" type="image/gif">
         <link rel="icon" href="/favicon.png" type="image/png">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.1/dist/toggle-engine.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.2/dist/toggle-engine.js"></script>
         <script src="/assets/js/homepage-dark-mode-specific.js"></script>
     </head>
     <body class="body">
@@ -48,7 +48,7 @@ layout: default
                 <nav class="page-links">
                     <div class="page-item">
                         {% for page in site.pages %}
-                            {% if page.title and page.layout == 'page' %}
+                            {% if page.title and page.layout == 'page' and page.exclude != "true" %}
                                 <a href="{{ page.url }}" class="underline">{{ page.title }}</a>
                             {% endif %}
                         {% endfor %}

@@ -29,7 +29,7 @@ layout: default
          <!-- python syntax from highlighter.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
          <!-- toggle-engine.js: for dark mode toggle -->
-        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.1/dist/toggle-engine.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.2/dist/toggle-engine.js"></script>
          <!-- syntax highlight activator -->
         <script src="/assets/js/syntax-highlighter.js"></script>
          <!-- signature cycle -->
@@ -72,16 +72,20 @@ layout: default
                                 {% endfor %}
                             {% else %}
                                 <!-- if nav data for current page does not exist -->
-                                {% for page in site.pages %}
-                                    {% if page.title and page.layout != "homepage" %}
-                                        {% if page.layout == "redirect" %}
-                                            <!-- if redirect -->
-                                            <a href="{{ page.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ page.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
-                                        {% else %}
+                                {% for page_ in site.pages %}
+                                    {% if page_.title and page_.layout != "homepage" and page_.title != page.title %}
+                                        {% if page_.layout != "redirect" and page_.exclude != "true" %}
                                             <!-- if page -->
-                                            {% assign name = page.name | remove: ".md" %}
+                                            {% assign name = page_.name | remove: ".md" %}
                                             {% assign data = side_data[name] %}
-                                            <a href="{{ page.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page.title }}</a>
+                                            <a href="{{ page_.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page_.title }}</a>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% for page_ in site.pages %}
+                                    {% if page_.title and page_.layout != "homepage" and page_.title != page.title %}
+                                        {% if page_.layout == "redirect" and page_.exclude != "true" %}
+                                        <a href="{{ page_.url }}" target="_blank" class="tooltip" position="nav-link" content="{{ page_.description }}" speed="15" tcolor="#f6185e">{{ page_.title }}</a>
                                         {% endif %}
                                     {% endif %}
                                 {% endfor %}
