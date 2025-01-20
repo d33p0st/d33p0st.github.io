@@ -4,7 +4,8 @@ const images = [
     '/assets/images/sign.gif',
     '/assets/images/sign5.gif',
     '/assets/images/sign6.gif',
-    // '/assets/images/sign4.gif'
+    '/assets/images/sign7.gif',
+    '/assets/images/sign8.gif',
 ];
 
 // preload the images
