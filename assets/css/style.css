@@ -543,7 +543,7 @@ code[class*="language-"] {
 /* Entire Layout */
 .doc-layout {
     display: flex;
-    height: 88vh; /* Full height viewport */
+    height: 89vh; /* Full height viewport */
 
 }
 .dark-mode .doc-layout {
