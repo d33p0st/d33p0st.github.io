@@ -4,7 +4,7 @@ title: Modstore
 heading: Modstore
 source-code: https://github.com/d33p0st/modstore
 release: https://pypi.org/project/modstore
-permalink: docs/modstore
+permalink: docs/modstore/
 exclude: 'true'
 identifier: Modstore
 ---
