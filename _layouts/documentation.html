@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en" class="html">
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>{{ page.title }}</title>
+
+        <!-- Stylesheets -->
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet">
+        
+        <!-- Icons -->
+        <link rel="icon" href="/favicon.gif" type="image/gif">
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- pre-load scripts -->
+         <!-- highlighter.js -->
+         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script> -->
+         <!-- python syntax from highlighter.js -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script> -->
+         <!-- toggle-engine.js: for dark mode toggle -->
+        <script src="https://cdn.jsdelivr.net/gh/d33p0st/toggle-engine.js@v1.0.2/dist/toggle-engine.js"></script>
+        <!-- First, Prism core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+        <!-- Then, Prism core JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+        <!-- Then, the autoloader that will load Python support -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+         <!-- syntax highlight activator -->
+        <!-- <script src="/assets/js/syntax-highlighter.js"></script> -->
+         <!-- signature cycle
+        <script src="/assets/js/signature-cycle.js"></script> -->
+    </head>
+    <body class="body">
+        <div class="doc-layout">
+            <div class="doc-left">
+                <div class="doc-name">
+                    <a href="{{ page.release }}" class="doc-name-link">{{ page.heading }}</a>
+                </div>
+                <!-- Nav bars will be here -->
+                <!-- All pages whose parent is page.title -->
+                <nav class="doc-nav-start">
+                    <div class="doc-nav-links">
+                        {% assign sorted = site.pages | sort: "order" %}
+                        {% for pg in sorted %}
+                            {% if pg.parent and pg.parent == page.identifier %}
+                                <a href="{{ pg.url }}" class="doc-nav-link">{{ pg.title }}</a><br>
+                            {% endif %}
+                        {% endfor %}
+                                <a href=".." class="doc-nav-link">Go back</a>
+                    </div>
+                </nav>
+            </div>
+
+            <main class="container">
+
+                <!-- Main Content Part Stretches -->
+
+                <!-- Create a Centered A4 Page in this. -->
+                <div class="doc-main-content doc">
+
+                    <article class="doc-article">
+                        <div class="doc-content">
+                            {{content}}
+                        </div>
+                    </article>
+
+                </div>
+
+            </main>
+
+
+
+
+        
+        </div>
+        <footer class="page-footer">
+            <p>This page is created with <a href="https://jekyllrb.com" target="_blank" class="tooltip" position="top" content="An open-source tool that creates static websites using plain text documents." speed="15">Jekyll</a>,
+                <a href="https://www.ruby-lang.org/en/" target="_blank" class="tooltip" position="top" content="An object-oriented programming language." speed="15">Ruby</a>, HTML, CSS, Javascript and Markdown.
+            </p>
+            <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.link }}" class="tooltip" position="top" content="@Owner." speed="55">{{ site.username }}</a>. All rights reserved.</p>
+        </footer>
+        <!-- typewriter effect for all available links. -->
+        <script src="/assets/js/typewriter.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                console.log('Checking if Prism is loaded:', typeof Prism !== 'undefined');
+                if(typeof Prism !== 'undefined') {
+                    Prism.highlightAll();
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -13,7 +13,6 @@ layout: default
         <title>{{ page.title }}</title>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet">
@@ -55,8 +54,8 @@ layout: default
                     <nav class="page-nav-bar">
                         <div class="page-nav-links">
                             {% assign site_data = site.data %}
-                            {% assign page_url_name = page.url | remove: "/" | remove: ".html" %}
-                            {% assign nav_data = site_data[page_url_name] %}
+                            {% assign page_name = page.name | remove: ".md" %}
+                            {% assign nav_data = site_data[page_name] %}
                             {% if nav_data %}
                                 <!-- {{ nav_data }} -->
                                 {% for page_name in nav_data.links %}
@@ -76,9 +75,11 @@ layout: default
                                     {% if page_.title and page_.layout != "homepage" and page_.title != page.title %}
                                         {% if page_.layout != "redirect" and page_.exclude != "true" %}
                                             <!-- if page -->
-                                            {% assign name = page_.name | remove: ".md" %}
-                                            {% assign data = side_data[name] %}
-                                            <a href="{{ page_.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page_.title }}</a>
+                                            {% assign title = page._title %}
+                                            {% assign link = site.pages | where: "title", page_.title | first %}
+                                            {% assign name = link.name | remove: ".md" %}
+                                            {% assign data = site_data[name] %}
+                                            <a href="{{ link.url }}" class="tooltip" position="nav-link" content="{{ data.description }}" speed="15" tcolor="#f6185e">{{ page_.title }}</a>
                                         {% endif %}
                                     {% endif %}
                                 {% endfor %}

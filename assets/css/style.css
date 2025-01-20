@@ -267,7 +267,7 @@
     margin: 20px auto;     /* Center horizontally with vertical margin */
     padding: 40px;
     background-color: #fff; /* White background for content */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Optional shadow for a clean card look */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     border-radius: 5px;    /* Slight rounding for visual appeal */     /* Prevents content overflow */
     margin-top: 0px;
     padding-top: 20px;
@@ -344,57 +344,77 @@
     text-decoration: none;
 }
 
-pre {
-    background-color: #eceaea;
-    /* padding: 10px; */
-    border-radius: 5px;
-    overflow-x: auto;
-    font-family:monospace;
-}
-.dark-mode pre {
-    background-color: #474747;
-}
-
-code {
-    color: #3b85ff;
-    /* background-color: #e9e7e7; */
-    background-color: #eceaea;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.dark-mode code {
-    background-color: #474747;
+/* Code block container */
+pre[class*="language-"] {
+    background-color: white !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 4px !important;
+    padding: 16px !important;
+    margin: 16px 0 !important;
+    overflow-x: auto !important;
 }
 
-/* Custom purple and orange theme for Highlight.js */
-.hljs {
-    /* background: #dededf; Dark purple background */
-    color: #3b85ff; /* Orange text */
-    /* font-weight:unset; */
-    font-size: 90%;
+/* Code language label (e.g., "python") */
+pre[class*="language-"]::before {
+    content: attr(data-language) !important;
+    display: block !important;
+    background: #f5f5f5 !important;
+    padding: 4px 8px !important;
+    margin: -16px -16px 16px -16px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    color: #ff2474 !important;
+    font-size: 0.85em !important;
+    font-family: monospace !important;
 }
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-symbol,
-.hljs-bullet {
-    color: #8f61f2; /* Orange highlights */
-    /* font-style:italic; */
-    font-weight:530;
-    /* font-size:90%; */
+
+/* Code content */
+code[class*="language-"] {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important; 
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: black !important;
+    /* padding: 0% !important; */
 }
-.hljs-comment,
-.hljs-quote {
-    color: #bebebe; /* Purple comment text */
+
+/* Keywords */
+.token.atrule, .token.attr-value, .token.keyword  {
+    color: #FF5A3C !important;
+    /* color: #3b85ff !important; */
 }
-.hljs-string {
-    color: #DA70D6; /* Light purple for strings */
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    color: #2893fe !important;
 }
-.hljs-number {
-    color: #D2691E; /* Orange brown for numbers */
+
+.token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string {
+    color:rgb(32, 203, 38) !important;
 }
-.hljs-title {
-    color:#f76a6a;
+.token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag {
+    color: #FF5A3C !important;
+}
+
+.token.cdata, .token.comment, .token.doctype, .token.prolog {
+    color: #bdbaba !important;
+    font-style: italic !important;
+}
+
+.token.class-name {
+    color: #3c7dff !important;
+}
+
+/* Strings */
+.token.string {
+    color: #575757 !important;
+}
+
+/* Function names */
+.token.function {
+    color: #3b85ff !important;
+}
+
+/* Punctuation */
+.token.punctuation {
+    color: #3b85ff !important;
 }
 
 /* Tooltip for link popups */
@@ -480,7 +500,102 @@ code {
     color: white;
 }
 
+/* For Documentation */
+/* Entire Layout */
+.doc-layout {
+    display: flex;
+    height: 88vh; /* Full height viewport */
 
+}
+
+.doc-left {
+    width: 140px; /* Fixed width for the sidebar */
+    padding: 20px;
+    overflow-y: auto; /* Scrollable if content overflows */
+    background-color: #ffffff;
+}
+.dark-mode .doc-left {
+    background-color: #000;
+}
+
+.doc-name {
+    margin-bottom: 40px;
+    margin-top: 5px;
+}
+.doc-name-link {
+    color: #000;
+    text-decoration: none;
+}
+.doc-name-link:hover {
+    color: #FF5A3C;
+}
+
+.doc-nav-start {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.doc-nav-links a {
+    margin-left: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* The paragraph */
+.doc-nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+.doc-nav-link:hover {
+    color: #3b85ff;
+}
+
+.doc-main-content {
+    width: 794px;          /* A4 page width in pixels (approximately 210mm) */
+    margin: 20px auto;     /* Center horizontally with vertical margin */
+    padding: 40px;
+    background-color: #fff; /* White background for content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;    /* Slight rounding for visual appeal */     /* Prevents content overflow */
+    margin-top: 40px;
+    padding-top: 20px;
+    overflow: visible;
+    height: auto;
+}
+.dark-mode .doc-main-content {
+    background-color: #000;
+}
+
+.doc-content {
+    font-size:large;       /* Standard font size for content */
+    color: #000000;           /* Neutral color for readability */
+    line-height: 1.8;      /* Add space between lines for better readability */
+    text-align: justify;   /* Justify text for equivalence alignment */
+    hyphens: auto;         /* Enable hyphenation for better justification */
+    word-wrap: break-word; /* Prevent long words from overflowing */
+    background-color: white;
+}
+.dark-mode .doc-content {
+    color: white;
+    background-color: #000;
+}
+
+.doc-content h1, h2, h3, h4, h5, h6 {
+    color: #3b85ff;
+}
+
+.doc-content a {
+  color: #3b85ff;
+  text-decoration: underline;
+  font-weight: normal;
+  text-underline-offset: 6px;
+  display: inline-block;
+}
+
+.doc-content a:hover {
+  color: #FF5A3C;
+  animation: bounce-link 1s ease-in-out infinite;
+}
 
 
 /* Responsive Design for smaller screens */

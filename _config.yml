@@ -2,7 +2,7 @@ title: "Soumyo Deep Gupta BASE"
 description: "Welcome to my HomePage"
 url: "https://d33p0st.in"
 
-baseurl: ""
+baseurl: "/"
 permalink: /:title/
 
 username: "tshoqr"
