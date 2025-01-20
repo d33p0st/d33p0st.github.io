@@ -1,7 +1,9 @@
 // assets/js/signature-cycle.js
 const images = [
-    '/assets/images/sign.gif',
     '/assets/images/sign3.gif',
+    '/assets/images/sign.gif',
+    '/assets/images/sign5.gif',
+    '/assets/images/sign6.gif',
     // '/assets/images/sign4.gif'
 ];
 
@@ -12,7 +14,7 @@ const preloadedImages = images.map(src => {
     return img;
 })
 
-let currentImageIndex = 1;
+let currentImageIndex = 0;
 
 function changeImage() {
 
