@@ -7,3 +7,4 @@ permalink: docs/
 ---
 
 1. [**Modstore**](modstore/)
+2. [**featurelib**](featurelib/)
